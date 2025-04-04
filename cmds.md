@@ -1,6 +1,6 @@
-# Bot Command Ideas
+#Bot Command Ideas
 
-Here is a list of potential command ideas for the Discord bots.
+Here is a list of potential command ideas for your Discord bot:
 
 ## Utility Commands
 1.  `/ping` - Check bot latency and status.
@@ -1095,4 +1095,1023 @@ Here is a list of potential command ideas for the Discord bots.
 1078. `/embed author <message_id> <text> [icon_url]` - Change the author of a bot embed.
 1079. `/embed footer <message_id> <text> [icon_url]` - Change the footer of a bot embed.
 1080. `/embed field <message_id> [add|edit|remove] <index_or_name> [value] [inline]` - Modify fields in a bot embed.
-1081. `/snipe clear` - Clear the snipe cache for the channel. 
+1081. `/snipe clear` - Clear the snipe cache for the channel.
+1082. `/auditlog filter [user] [action_type] [before_id] [after_id] [limit]` - Filter audit logs with more precision.
+1083. `/permission history [role_or_user]` - Show the history of permission changes for a role or user (requires logging).
+1084. `/role clone [role] <new_name>` - Clone an existing role's permissions and settings.
+1085. `/channel permissions copy [source_channel] [target_channel]` - Copy all permission overwrites.
+1086. `/message crosspost <message_id>` - Manually crosspost (publish) a message from an announcement channel.
+1087. `/server discovery requirements` - Check if the server meets requirements for Discovery listing.
+1088. `/server template sync` - Update the server's template code.
+1089. `/server integrations` - List active server integrations (webhooks, bots, apps).
+1090. `/integration info [integration_id]` - Show details about a specific integration.
+1091. `/webhook permissions [webhook_url]` - Check permissions needed to send to a webhook URL.
+1092. `/automod rules` - List the currently configured Discord AutoMod rules.
+1093. `/automod rule create [name] [trigger] [action] [exempt_roles/channels]` - Create a new Discord AutoMod rule.
+1094. `/automod rule delete [rule_id]` - Delete a Discord AutoMod rule.
+1095. `/automod rule modify [rule_id] [...]` - Modify an existing Discord AutoMod rule.
+1096. `/modalert [message]` - Send an urgent alert to online moderators.
+1097. `/security audit` - Run a comprehensive check for common server security misconfigurations.
+1098. `/privacy audit` - Run a check for potential privacy concerns in server settings/roles.
+1099. `/token revoke [application_id]` - Revoke access for a specific application/bot integration (admin).
+1100. `/role reachability [role]` - Check which channels a role can read/send messages in.
+1101. `/channel visibility [channel] [user]` - Check if a specific user can see and access a channel.
+1102. `/permission conflicts [user]` - Identify potential permission conflicts for a user.
+1103. `/temp role [user] [role] <duration> [reason]` - Assign a role temporarily.
+1104. `/temprole list [user]` - List active temporary roles for a user.
+1105. `/temprole remove [user] [role]` - Remove a temporary role assignment early.
+1106. `/lockdown exempt [role|user]` - Exempt roles/users from server lockdown.
+1107. `/nickname policy [enforce|disable] [regex_pattern]` - Enforce nickname standards.
+1108. `/avatar policy [enforce|disable]` - Check for default avatars or enforce specific rules (difficult).
+1109. `/massdm [role] <message>` - DM all users with a specific role (use with extreme caution, potential ToS violation).
+1110. `/report system config [channel] [review_role]` - Configure the user reporting system.
+1111. `/jira issue create <project> <summary> <description>` - Create an issue in Jira.
+1112. `/jira issue view <issue_key>` - View details of a Jira issue.
+1113. `/trello card create <board> <list> <name> [description]` - Create a Trello card.
+1114. `/trello card view <card_id_or_url>` - View details of a Trello card.
+1115. `/gitlab issue create <project_id> <title> [description]` - Create an issue on GitLab.
+1116. `/gitlab repo info <owner/repo>` - Show info about a GitLab repository.
+1117. `/bitbucket issue create <workspace/repo> <title> [description]` - Create an issue on Bitbucket.
+1118. `/bitbucket repo info <workspace/repo>` - Show info about a Bitbucket repository.
+1119. `/asana task create <workspace> <project> <name> [notes]` - Create a task in Asana.
+1120. `/asana task view <task_id>` - View details of an Asana task.
+1121. `/googlecalendar events list [calendar_id]` - List upcoming events from a Google Calendar.
+1122. `/googlecalendar event create <summary> <start_time> <end_time> [description]` - Add an event to Google Calendar.
+1123. `/googledrive file find <query>` - Search for files in Google Drive.
+1124. `/googledrive file info <file_id>` - Get info about a file in Google Drive.
+1125. `/dropbox file find <query>` - Search for files in Dropbox.
+1126. `/dropbox file info <file_path>` - Get info about a file in Dropbox.
+1127. `/zoom meeting create <topic> [start_time] [duration]` - Create a Zoom meeting.
+1128. `/zoom meeting info <meeting_id>` - Get info about a Zoom meeting.
+1129. `/microsoftteams message send <channel_id> <message>` - Send a message to a Microsoft Teams channel.
+1130. `/slack message send <channel_id> <message>` - Send a message to a Slack channel.
+1131. `/canvas courses list` - List your courses on Canvas LMS.
+1132. `/canvas assignments list <course_id>` - List upcoming assignments for a Canvas course.
+1133. `/moodle courses list` - List your courses on Moodle.
+1134. `/moodle assignments list <course_id>` - List upcoming assignments for a Moodle course.
+1135. `/duolingo profile [username]` - Show Duolingo learning progress.
+1136. `/codecademy profile [username]` - Show Codecademy progress.
+1137. `/stackoverflow user [user_id]` - Show Stack Overflow user reputation and stats.
+1138. `/reddit user [username]` - Show Reddit user karma and account info.
+1139. `/deviantart browse [query]` - Browse deviations on DeviantArt.
+1140. `/artstation browse [query]` - Browse artwork on ArtStation.
+1141. `/unsplash image [query]` - Fetch a high-quality image from Unsplash.
+1142. `/pexels image [query]` - Fetch a high-quality image from Pexels.
+1143. `/dataviz chart create <type> <data> [labels] [title]` - Create a chart image (bar, line, pie).
+1144. `/dataviz graphviz <dot_code>` - Render a graph using Graphviz DOT language.
+1145. `/file metadata [file_upload]` - Extract metadata from various file types.
+1146. `/file compare text [file1] [file2]` - Show differences between two text files.
+1147. `/file compare image [file1] [file2]` - Show differences between two image files.
+1148. `/file checksum [file_upload] [algorithm]` - Calculate checksum (MD5, SHA1, SHA256) for a file.
+1149. `/unit conversion list` - List all available unit conversion categories and units.
+1150. `/physics constant <constant_name>` - Look up the value of a physical constant.
+1151. `/chemistry element <element_name_or_symbol>` - Get information about a chemical element.
+1152. `/chemistry compound <formula_or_name>` - Get information about a chemical compound.
+1153. `/astronomy object <object_name>` - Get information about a celestial object.
+1154. `/biology taxon <species_name>` - Get information from biological taxonomy databases.
+1155. `/latex render <latex_code>` - Render LaTeX code into an image.
+1156. `/user preference set <key> <value>` - Set a personal preference for bot behavior (e.g., timezone, display density).
+1157. `/user preference view <key>` - View a personal preference.
+1158. `/user preference list` - List all available preferences.
+1159. `/bot notification config [type] [enable|disable|dm|channel]` - Configure where bot sends notifications (level ups, reminders, etc).
+1160. `/command alias global create <alias_name> <command_string>` - Create a server-wide command alias (admin).
+1161. `/command alias global delete <alias_name>` - Delete a server-wide alias (admin).
+1162. `/command alias global list` - List server-wide aliases.
+1163. `/command cooldown set <command_name> <duration> [role_or_channel]` - Set custom cooldowns for commands (admin).
+1164. `/command cooldown view <command_name>` - View cooldown settings for a command.
+1165. `/chess analyze [fen_string_or_pgn]` - Analyze a chess position or game.
+1166. `/connect4 analyze [board_state]` - Analyze a Connect Four position.
+1167. `/hangman custom [word] [guesses]` - Start a Hangman game with a custom word.
+1168. `/trivia categories` - List available trivia categories.
+1169. `/trivia leaderboard clear` - Clear the trivia leaderboard.
+1170. `/wordle stats [user]` - Show Wordle play statistics.
+1171. `/numberguess [range]` - Start a number guessing game.
+1172. `/typingtest leaderboard` - Show the typing test leaderboard.
+1173. `/fishing leaderboard` - Show the fishing leaderboard (economy).
+1174. `/hunting leaderboard` - Show the hunting leaderboard (economy).
+1175. `/pets adopt <type> [name]` - Adopt a virtual pet.
+1176. `/pets feed [name]` - Feed your virtual pet.
+1177. `/pets play [name]` - Play with your virtual pet.
+1178. `/pets status [name]` - Check your virtual pet's status.
+1179. `/pets list` - List your virtual pets.
+1180. `/ai explain <concept>` - Explain a complex concept simply using AI.
+1181. `/ai prosandcons <topic>` - List pros and cons for a topic using AI.
+1182. `/ai brainstorm <topic>` - Brainstorm ideas related to a topic using AI.
+1183. `/ai generate quiz <topic> [questions]` - Generate a quiz on a topic using AI.
+1184. `/ai generate recipe <ingredients_or_dish>` - Generate a recipe using AI.
+1185. `/ai sentiment analysis <text>` - Analyze the sentiment of a piece of text using AI.
+1186. `/ai keyword extraction <text>` - Extract keywords from text using AI.
+1187. `/ai text readability <text>` - Analyze the readability score of text.
+1188. `/ai meeting summary <transcript>` - Summarize meeting notes or transcript using AI.
+1189. `/accessibility check image [image_url]` - Check image for common accessibility issues (e.g., alt text).
+1190. `/accessibility check contrast <color1> <color2>` - Check color contrast ratio.
+1191. `/accessibility read aloud <text>` - Read text aloud using TTS (Text-to-Speech).
+1192. `/accessibility config [tts_voice] [speed]` - Configure TTS settings.
+1193. `/event rsvp <event_id> [yes|no|maybe]` - RSVP to a server scheduled event.
+1194. `/event remindme <event_id>` - Set a reminder for a specific scheduled event.
+1195. `/event export <event_id> [ical|google]` - Export event details to a calendar format.
+1196. `/icebreaker question` - Get a random icebreaker question.
+1197. `/icebreaker game [type]` - Start a simple icebreaker game (e.g., Two Truths and a Lie).
+1198. `/qanda session start <topic>` - Start a Q&A session channel/thread.
+1199. `/qanda ask <question>` - Ask a question during a Q&A session.
+1200. `/qanda answer <question_id> <answer>` - Answer a question during a Q&A session (host).
+1201. `/role tree` - Display the role hierarchy as a tree structure.
+1202. `/role orphans` - List roles that have no members.
+1203. `/role permissions compare [role1] [role2]` - Show differences in permissions between two roles.
+1204. `/role permissions neededfor <permission_name>` - List roles that grant a specific permission.
+1205. `/channel template save <channel> <template_name>` - Save a channel's settings and permissions as a template.
+1206. `/channel template apply <template_name> <new_channel_name>` - Create a channel from a template.
+1207. `/channel template list` - List saved channel templates.
+1208. `/channel cleanup config [channel] [keep_pinned] [ignore_users]` - Configure automatic message cleanup rules.
+1209. `/channel cleanup run [channel]` - Manually trigger a channel cleanup based on rules.
+1210. `/archive search <query>` - Search within previously archived channel logs (if stored).
+1211. `/server stats export [csv|json]` - Export server statistics data.
+1212. `/user stats export [user] [csv|json]` - Export user statistics data.
+1213. `/medical dictionary [term]` - Look up medical terms (provide disclaimer).
+1214. `/legal dictionary [term]` - Look up legal terms (provide disclaimer).
+1215. `/doi lookup <doi_number>` - Look up scientific papers by DOI.
+1216. `/arxiv search <query>` - Search for papers on arXiv.
+1217. `/pubmed search <query>` - Search for papers on PubMed Central.
+1218. `/collaborative write start <document_name>` - Start a collaborative writing document/pad.
+1219. `/collaborative write join <document_name>` - Join a writing session.
+1220. `/drawing board start` - Create a collaborative drawing board link/instance.
+1221. `/music compose helper [key] [scale]` - Provide music theory aids (scales, chords).
+1222. `/data breach check email <email>` - Check an email against Have I Been Pwned.
+1223. `/data breach check domain <domain>` - Check if a domain has appeared in breaches (associated emails).
+1224. `/permission audit roles` - Audit roles for potentially dangerous permission combinations.
+1225. `/permission audit users` - Audit users with high privilege levels.
+1226. `/server invite security check` - Check invite settings for potential abuse vectors.
+1227. `/webhook security check` - Check webhooks for overly broad permissions or exposure.
+1228. `/git log [repo_url] [branch]` - Show recent commit history for a public repository.
+1229. `/git blame [repo_url] [file_path] [line_number]` - Show who last modified a line in a file (public repo).
+1230. `/dockerhub info [image_name]` - Show information about a Docker Hub image.
+1231. `/currency history <from_currency> <to_currency> [range]` - Show historical exchange rate graph.
+1232. `/stock history <symbol> [range]` - Show historical stock price graph.
+1233. `/crypto history <symbol> [range]` - Show historical crypto price graph.
+1234. `/wikipedia diff <article_title> [revision1] [revision2]` - Show changes between Wikipedia article revisions.
+1235. `/vote anonymous <question> | <option1> | ...` - Create a poll where votes are anonymous even to the bot admin.
+1236. `/reactionrole removeall [message_id]` - Remove all reaction role configurations from a message.
+1237. `/selfrole description [role] <description>` - Add a description to a self-assignable role.
+1238. `/timezone abbreviation <tz_abbreviation>` - Explain a timezone abbreviation (e.g., EST, PDT).
+1239. `/weather alerts [location]` - Show active weather alerts for a location.
+1240. `/airquality forecast [location]` - Show the AQI forecast.
+1241. `/package manager search <query>` - Search across multiple package managers (PyPI, NPM, RubyGems, etc.).
+1242. `/soundboard search <query>` - Search available soundboard sounds by name.
+1243. `/ai conversation <start_prompt>` - Start a persistent conversation thread with an AI.
+1244. `/ai conversation continue <message>` - Continue the AI conversation.
+1245. `/ai conversation history` - Show the history of the current AI conversation.
+1246. `/ai conversation end` - End the current AI conversation.
+1247. `/image generate variations [image_url]` - Generate AI variations of an existing image.
+1248. `/image generate edit [image_url] <prompt>` - Edit parts of an image using AI based on a text prompt.
+1249. `/emoji combine <emoji1> <emoji2>` - Attempt to combine two emojis (using Google's Emoji Kitchen API if available).
+1250. `/pomodoro stats` - Show your Pomodoro session statistics.
+1251. `/movie watchlist [add|remove|view] <movie_title>` - Manage your personal movie watchlist.
+1252. `/tv watchlist [add|remove|view] <show_title>` - Manage your personal TV show watchlist.
+1253. `/game backlog [add|remove|view] <game_title>` - Manage your personal game backlog.
+1254. `/book readinglist [add|remove|view] <book_title>` - Manage your personal reading list.
+1255. `/server settings history` - Show a log of changes to major server settings (if logged).
+1256. `/role permissionlog [role]` - Show a log of permission changes specifically for one role (if logged).
+1257. `/message pin <message_id>` - Pin a message via bot command.
+1258. `/message unpin <message_id>` - Unpin a message via bot command.
+1259. `/message pins list [channel]` - List pinned messages in a channel.
+1260. `/thread frommessage <message_id> <name>` - Create a thread starting from a specific message.
+1161. `/thread rename <thread> <new_name>` - Rename a thread.
+1162. `/thread members [thread]` - List members currently in a private thread.
+1163. `/forum search <forum_channel> <query>` - Search for posts within a specific forum channel.
+1164. `/forum pin <post_id>` - Pin a post within a forum channel.
+1165. `/forum unpin <post_id>` - Unpin a forum post.
+1166. `/forum lock <post_id>` - Lock a forum post (prevent replies).
+1167. `/forum unlock <post_id>` - Unlock a forum post.
+1168. `/forum tag post <post_id> [add|remove] <tag>` - Add or remove tags from a forum post.
+1169. `/activity stats [activity_name]` - Show usage statistics for voice channel activities.
+1170. `/sticky message edit <channel> <new_message>` - Edit the content of a sticky message.
+1171. `/sticky message embed <channel> <json_or_builder>` - Use an embed for the sticky message.
+1172. `/autoresponse list` - List currently configured autoresponses.
+1173. `/autoresponse view <trigger>` - View the details of a specific autoresponse.
+1174. `/autoresponse stats [trigger]` - Show usage stats for an autoresponse.
+1175. `/customcommand view <name>` - View the script/actions for a custom command.
+1176. `/customcommand permissions <name> [role|user] [allow|deny]` - Set permissions for a custom command.
+1177. `/backup download [id]` - Download a server backup file (admin).
+1178. `/backup compare [id1] [id2]` - Show a diff between two server backups.
+1179. `/voicelog search <user> [timeframe]` - Search voice join/leave logs.
+1180. `/messagelog search <user> [keyword] [timeframe]` - Search message edit/delete logs.
+1181. `/modlog search <user|moderator|action> [timeframe]` - Search moderation action logs.
+1182. `/ticket transcript format [html|txt]` - Set the format for ticket transcripts.
+1183. `/ticket priority [set|view] <level>` - Set or view the priority of a ticket.
+1184. `/ticket tag [add|remove|list] <tag>` - Add tags to categorize tickets.
+1185. `/ticket list [status|user|assignee|tag]` - Filter the list of tickets.
+1186. `/starboard blacklist user [user] [add|remove]` - Prevent a user's messages from appearing on the starboard.
+1187. `/starboard minimum stars <count>` - Set the minimum stars required for a message to appear.
+1188. `/starboard autostar [enable|disable]` - Automatically star messages from specific users/roles (use carefully).
+1189. `/translate language detect <text>` - Detect the language of a piece of text.
+1190. `/image steganalysis [image]` - Attempt to detect hidden data (steganography) in an image.
+1191. `/audio steganalysis [audio]` - Attempt to detect hidden data in audio.
+1192. `/filetype identify [file]` - Identify the type of a file based on its signature.
+1193. `/password dump check <password>` - Check if a password appears in known credential dumps (use secure API).
+1194. `/twofactor status` - Check if 2FA is enabled for the bot's account (informational).
+1195. `/server rules view` - Display the server's rules channel content directly.
+1196. `/role reaction limit [role] <count>` - Limit how many reaction roles a user with a specific role can have.
+1197. `/message require reaction <message_id> [role] [emoji]` - Require users with a role to react to a message.
+1198. `/channel slowmode duration <channel>` - Show how long slowmode has been active in a channel.
+1199. `/timeout user [user] <duration> [reason]` - Use Discord's built-in Timeout feature.
+1200. `/timeout list` - List users currently timed out.
+1201. `/emoji usage [emoji]` - Show how often a custom emoji is used (requires logging).
+1202. `/sticker usage [sticker]` - Show how often a custom sticker is used (requires logging).
+1203. `/invite usage [invite_code]` - Show usage stats for a specific invite code over time.
+1204. `/command usage graph [command_name] [timeframe]` - Show a graph of command usage over time.
+1205. `/feature usage graph <feature_name> [timeframe]` - Show usage graph for a bot feature (e.g., leveling, economy).
+1206. `/ai prompt library [list|add|use] <name> [prompt]` - Manage a library of prompts for AI generation.
+1207. `/ai image style <style_preset> <prompt>` - Generate an image using a specific preset style (e.g., anime, photorealistic).
+1208. `/ai image upscale [image]` - Upscale the resolution of an AI-generated or other image.
+1209. `/ai text adventure start [genre]` - Start a text adventure game powered by AI.
+1210. `/ai text adventure action <action>` - Perform an action in the AI text adventure.
+1211. `/music playlist import [youtube|spotify] <url>` - Import a playlist directly from a URL.
+1212. `/music playlist export <name> [format]` - Export a bot playlist.
+1213. `/music playlist collaborate [add|remove] [user] <name>` - Allow others to add/remove songs from a playlist.
+1214. `/music lyrics find <query>` - Search for lyrics without playing a song.
+1215. `/music recommendations [genre|artist|song]` - Get music recommendations based on input.
+1216. `/system resource graph [cpu|mem|disk|net] [timeframe]` - Show graphs of system resource usage over time.
+1217. `/github release watch [owner/repo] [channel]` - Announce new releases for a GitHub repository.
+1218. `/rss feed filter [url] [include_keywords|exclude_keywords]` - Filter RSS feed entries before posting.
+1219. `/server event log` - Show a log of server scheduled events (created, started, cancelled).
+1220. `/user note private [user] <note>` - Add a private note about a user visible only to you.
+1221. `/user note list [user]` - List your private notes for a user.
+1222. `/server group [create|delete|add|remove|list] <group_name> [channel|role]` - Group channels/roles for easier management.
+1223. `/server group broadcast <group_name> <message>` - Send a message to all channels in a group.
+1224. `/server group permission <group_name> [role] [allow|deny] [permissions]` - Apply permissions to all channels in a group.
+1225. `/role request autoapprove [role] [toggle]` - Toggle auto-approval for specific role requests.
+1226. `/economy stocks watchlist [add|remove|view] [symbol]` - Manage your stock watchlist.
+1227. `/economy crypto watchlist [add|remove|view] [symbol]` - Manage your crypto watchlist.
+1228. `/profile badge create <name> <icon> [description]` - Create custom badges for profiles (admin).
+1229. `/profile badge delete <name>` - Delete a custom badge (admin).
+1230. `/profile badge list` - List available profile badges.
+1231. `/pet battle [user_pet] [opponent_pet]` - Start a simple battle between virtual pets.
+1232. `/pet trade [user1] [pet1] [user2] [pet2]` - Initiate a trade of virtual pets.
+1233. `/interaction create button <label> [style] [custom_id|url] [emoji]` - Create a message with buttons.
+1234. `/interaction create selectmenu <placeholder> [custom_id] <options...>` - Create a message with a dropdown select menu.
+1235. `/interaction respond modal <interaction_id> <title> <components...>` - Respond to an interaction with a modal form.
+1236. `/interaction respond defer <interaction_id> [ephemeral]` - Acknowledge an interaction to respond later.
+1237. `/interaction respond edit <interaction_id> <new_content>` - Edit the initial response to an interaction.
+1238. `/debug interaction <interaction_id>` - Get debug info for a specific interaction event.
+1239. `/debug gateway events [filter]` - Show recent gateway events received by the bot.
+1240. `/debug cache stats [object_type]` - Show statistics about the bot's internal cache.
+1241. `/server boost perks list` - List the perks currently active from server boosts.
+1242. `/server boost goal [set|view] <level>` - Set or view a server boost goal.
+1243. `/member list [role] [status] [activity]` - Advanced member listing with multiple filters.
+1244. `/member prune simulate [days] [role]` - Simulate pruning members without actually kicking.
+1245. `/channel nuke simulate [channel]` - Simulate nuking a channel (shows what would be deleted/created).
+1246. `/role permissions effective [role]` - Show the final calculated permissions including hierarchy.
+1247. `/user permissions effective [user] [channel]` - Show the final calculated permissions for a user in a specific channel.
+1248. `/invite analytics [invite_code]` - Show analytics for an invite code (joins over time, conversion rate, if tracked).
+1249. `/level leaderboard relative [user]` - Show the leaderboard centered around a specific user.
+1250. `/level role rewards list` - List all configured level role rewards.
+1251. `/economy lottery history` - Show history of past lottery winners and jackpots.
+1252. `/image caption contest [start|submit|vote|end]` - Run a caption contest for an image.
+1253. `/ai story continue <story_id> <prompt>` - Continue a collaboratively written AI story.
+1254. `/ai image describe [image]` - Have AI describe the contents of an image.
+1255. `/ai image question [image] <question>` - Ask a question about the contents of an image.
+1256. `/soundboard play random` - Play a random sound from the soundboard.
+1257. `/voicemod list effects` - List available voice modification effects.
+1258. `/remind recurring list` - List your active recurring reminders.
+1259. `/birthday upcoming [days]` - Show birthdays coming up within a specific number of days.
+1260. `/wolframalpha image <query>` - Get an image result from WolframAlpha.
+1261. `/wolframalpha stepbystep <query>` - Get step-by-step solutions from WolframAlpha (requires API plan).
+1262. `/google image search <query>` - Perform a Google Image search.
+1263. `/google scholar search <query>` - Perform a Google Scholar search.
+1264. `/duckduckgo search <query>` - Perform a DuckDuckGo search.
+1265. `/duckduckgo image search <query>` - Perform a DuckDuckGo image search.
+1266. `/spotify playlist create <name>` - Create a new empty Spotify playlist (requires scope).
+1267. `/spotify playlist add <playlist_id> <track_url_or_uri>` - Add a track to a Spotify playlist.
+1268. `/steam achievement check [user] [game]` - Check a user's achievement progress for a Steam game.
+1269. `/github issue search [repo] <query>` - Search for issues in a GitHub repository.
+1270. `/github pullrequest search [repo] <query>` - Search for pull requests in a GitHub repository.
+1271. `/server welcome message variables` - List available variables for welcome messages.
+1272. `/server leave message variables` - List available variables for leave messages.
+1273. `/server boost message variables` - List available variables for boost messages.
+1274. `/purge regex <regex_pattern> [channel] [limit]` - Purge messages matching a regex pattern.
+1275. `/purge unique [channel] [limit]` - Purge leaving only unique messages (based on content).
+1276. `/channel permission sync [source_channel] [target_channels...]` - Sync permissions from one channel to multiple others.
+1277. `/role permission copy [source_role] [target_roles...]` - Copy permissions from one role to multiple others.
+1278. `/forum default tags [forum_channel] [add|remove|list] <tag>` - Set default tags applied to new forum posts.
+1279. `/thread autopin [enable|disable] [thread]` - Automatically pin the first message in a thread.
+1280. `/activity watchtogether invite [user]` - Invite a user to the current Watch Together activity.
+1281. `/tag stats [name]` - Show usage statistics for a specific tag.
+1282. `/tag export [format]` - Export all server tags.
+1283. `/tag import [format] [file]` - Import tags from a file.
+1284. `/image mosaic [images...]` - Create a mosaic from several images.
+1285. `/image grid [images...] [columns]` - Arrange images into a grid.
+1286. `/music queue save <name>` - Save the current music queue as a playlist.
+1287. `/music playlist shuffle <name>` - Shuffle a saved playlist.
+1288. `/confession config [channel] [anonymous_posting]` - Configure the confession system.
+1289. `/ask config [channel] [anonymous_questions]` - Configure the anonymous question system.
+1290. `/profile sync role <role> <badge_or_background>` - Automatically grant profile items based on roles.
+1291. `/marry stats` - Show statistics about marriages in the server.
+1292. `/leaderboard games [game_name]` - Show leaderboards for specific bot games.
+1293. `/soundboard volume <name> <level>` - Set default volume for a specific soundboard sound.
+1294. `/gpt model list` - List available GPT models for `/gpt query`.
+1295. `/gpt config [model] [temperature] [max_tokens]` - Configure default GPT parameters.
+1296. `/user presence history [user]` - Show a user's status/activity history (if logged).
+1297. `/server feature flags` - Show enabled/disabled Discord features for the server.
+1298. `/webhook execute <url> <json_payload>` - Send a raw JSON payload to a webhook.
+1299. `/message raw <message_id>` - Show the raw JSON data for a message object.
+1300. `/user raw <user_id>` - Show the raw JSON data for a user object.
+1301. `/role raw <role_id>` - Show the raw JSON data for a role object.
+1302. `/channel raw <channel_id>` - Show the raw JSON data for a channel object.
+1303. `/guild raw <guild_id>` - Show the raw JSON data for a guild object.
+1304. `/permission explain <permission_name>` - Explain what a specific Discord permission allows.
+1305. `/intent explain <intent_name>` - Explain what data a specific gateway intent provides.
+1306. `/color contrast checker` - Open an interactive color contrast checker.
+1307. `/unicode properties <character>` - Show detailed Unicode properties for a character.
+1308. `/timezone map <timezone_name>` - Show a map highlighting a specific timezone.
+1309. `/member join position [user]` - Show a user's join position (e.g., "You are the 100th member").
+1310. `/member role history [user]` - Show the history of roles added/removed for a user (if logged).
+1311. `/purge attachments type <file_extension> [channel] [limit]` - Purge messages with specific attachment types.
+1312. `/invite vanity uses` - Show how many times the vanity URL has been used.
+1313. `/level xp needed [user]` - Show how much XP a user needs for the next level.
+1314. `/level rank card customize [bg_image|color|font]` - Customize your rank card appearance.
+1315. `/economy tax rate [set|view] <rate>` - Set a server-wide tax rate for transactions.
+1316. `/economy interest rate [set|view] <rate>` - Set an interest rate for banked currency.
+1317. `/image generate prompt assist <keywords>` - Get help generating a good prompt for AI image generation.
+1318. `/image meme search <query>` - Search for meme templates by keyword.
+1319. `/music history clear` - Clear your personal music playback history.
+1320. `/music scrobble [enable|disable] [lastfm_username]` - Scrobble played tracks to Last.fm.
+1321. `/server rules sign <message_id>` - Require users to react to the rules message to gain access (requires setup).
+1322. `/auditlog stream [enable|disable] [channel]` - Stream audit log events live to a channel.
+1323. `/dynamic vc template [set|view] [name_format|limit|bitrate]` - Configure the template for dynamic voice channels.
+1324. `/role group manage [add|remove|list] <group_name> [role]` - Manage roles within logical groups (for organization).
+1325. `/role group permissions <group_name> [allow|deny] [permissions]` - Apply permission changes to all roles in a group.
+1326. `/ticket close reason [add|remove|list] <reason_text>` - Manage predefined reasons for closing tickets.
+1327. `/ticket auto close [enable|disable] [inactive_duration]` - Automatically close inactive tickets.
+1328. `/starboard star threshold random [min] [max]` - Set a random star threshold within a range.
+1329. `/ai chatbot persona [set|view] <persona_description>` - Set a specific persona for the AI chatbot.
+1330. `/ai image negative prompt <prompt>` - Specify things the AI should *avoid* generating in images.
+1331. `/command shortcut create <shortcut> <command_string>` - Create simple shortcuts (e.g., `?` for `/help`).
+1332. `/command shortcut delete <shortcut>` - Delete a command shortcut.
+1333. `/command shortcut list` - List active command shortcuts.
+1334. `/user color [user]` - Show the user's highest role color or accent color.
+1335. `/server color palette` - Show the dominant colors used in server roles.
+1336. `/message wordcount <message_id>` - Count words in a specific message.
+1337. `/channel wordcount [channel] [limit]` - Count total words sent in a channel recently.
+1338. `/translate stats` - Show statistics on translation usage.
+1339. `/voicetime leaderboard [timeframe]` - Show the leaderboard for time spent in voice channels.
+1340. `/command stats detailed [command]` - Show detailed usage stats (users, channels, times).
+1341. `/error rate` - Show the bot's command error rate over time.
+1342. `/suggestion implementer <suggestion_id> [user]` - Mark who implemented a suggestion.
+1343. `/bugreport duplicate <bug_id_1> <bug_id_2>` - Mark a bug report as a duplicate of another.
+1344. `/application comment <app_id> <comment>` - Add internal comments to a staff application.
+1345. `/purge pinned [channel]` - Unpin and delete pinned messages in a channel.
+1346. `/prune roles [roles_to_require] [days_inactive]` - Prune members who don't have certain roles and are inactive.
+1347. `/channel permissions reset [channel] [role_or_user]` - Reset permissions for a specific overwrite.
+1348. `/role members remove [role] [users...]` - Remove specific users from a role.
+1349. `/emoji steal pack [message_link]` - Add all emojis from a message to the server.
+1350. `/thread activity digest <thread>` - Get an AI-generated summary of recent thread activity.
+1351. `/server rules edit` - Interactively edit the server rules channel message.
+1352. `/channel default slowmode [category|channel] <seconds>` - Set default slowmode for new channels in a category.
+1353. `/channel default permissions [category] [role] [allow|deny] [permissions]` - Set default permissions for new channels in a category.
+1354. `/role add multiple [users...] [roles...]` - Add multiple roles to multiple users at once.
+1355. `/role remove multiple [users...] [roles...]` - Remove multiple roles from multiple users.
+1356. `/user data export [user]` - Export data the bot stores about a specific user (admin).
+1357. `/user data delete [user]` - Delete data the bot stores about a specific user (admin).
+1358. `/server data export` - Export all data the bot stores for the current server (admin).
+1359. `/server data delete` - Delete all data the bot stores for the current server (admin).
+1360. `/privacy policy update <new_policy_text>` - Update the bot's privacy policy link/text (owner).
+1361. `/terms of service update <new_terms_text>` - Update the bot's terms of service link/text (owner).
+1362. `/command disable user [command] [user]` - Disable a specific command for a specific user.
+1363. `/command enable user [command] [user]` - Re-enable a disabled command for a user.
+1364. `/command disable role [command] [role]` - Disable a command for users with a specific role.
+1365. `/command enable role [command] [role]` - Re-enable a command for users with a specific role.
+1366. `/command disable channel [command] [channel]` - Disable a command in a specific channel.
+1367. `/command enable channel [command] [channel]` - Re-enable a command in a specific channel.
+1368. `/rate limit status [command|module]` - Check the current rate limit status for specific commands/modules.
+1369. `/shard reallocate [shard_id] [new_process]` - Move a shard to a different process (owner, advanced).
+1370. `/shard broadcast eval <code>` - Run code across all shards (owner, extremely dangerous).
+1371. `/message relay setup [channel1] [channel2]` - Relay messages between two channels (can be cross-server if bot architecture supports).
+1372. `/message relay stop [channel1] [channel2]` - Stop relaying messages.
+1373. `/message relay list` - List active message relays.
+1374. `/reaction copy recent <count> <channel>` - Copy reactions from the last X messages in a channel.
+1375. `/embed generator tool` - Link to an external embed generator website.
+1376. `/webhook permissions simulator [url]` - Simulate sending different payloads to check webhook permissions.
+1377. `/moderation heatmap [timeframe]` - Show a heatmap of moderation actions over time/day.
+1378. `/activity correlation [activity1] [activity2]` - Check for correlation between two types of server activities (e.g., messages and voice).
+1379. `/snipe config [enabled|disabled|timeout]` - Configure snipe command behavior.
+1380. `/editsnipe config [enabled|disabled|timeout]` - Configure editsnipe command behavior.
+1381. `/role persistence log [user]` - Show a log of roles reapplied to a user upon rejoin.
+1382. `/nickname persistence log [user]` - Show a log of nicknames reapplied to a user upon rejoin.
+1383. `/raidmode triggers [list|set] [joins_per_minute|new_accounts_per_hour]` - Configure triggers for automatic raid mode.
+1384. `/automod exempt duration [rule_id] [user] <duration>` - Temporarily exempt a user from an AutoMod rule.
+1385. `/backup compare with server [backup_id]` - Compare a backup state with the current live server state.
+1386. `/channel stats compare [channel1] [channel2]` - Compare activity stats between two channels.
+1387. `/role stats compare [role1] [role2]` - Compare stats between two roles.
+1388. `/server growth prediction [days]` - Attempt to predict server growth based on recent trends (statistical guess).
+1389. `/github webhook events [url] [add|remove] [event_type]` - Configure specific event types for GitHub webhooks.
+1390. `/dynamic vc region [template] <region>` - Set a specific voice region for dynamically created VCs.
+1391. `/purge before date <date> [channel]` - Purge messages before a specific date.
+1392. `/purge after date <date> [channel]` - Purge messages after a specific date.
+1393. `/purge contains filetype <extension> [channel] [limit]` - Purge messages containing specific file types.
+1394. `/channel voice activity [channel]` - Show who is currently speaking in a voice channel (requires specific intents/permissions).
+1395. `/role permissions unused [role]` - Check for permissions granted to a role that might be unused or unnecessary.
+1396. `/server invites tracking url <url>` - Generate an invite URL that tracks clicks/source (requires external service/setup).
+1397. `/thread participants [thread]` - List users who have participated (sent messages) in a thread.
+1398. `/forum participants [post_id]` - List users who have replied to a forum post.
+1399. `/activity launcher <activity_name>` - Launch a voice channel activity directly by name.
+1400. `/remind on role add <user> <role> <message>` - Remind you when a user gains a specific role.
+1401. `/tag execute <name>` - If tag content is a command string, execute it (risky, needs config).
+1402. `/image steganography encode [image] <text_or_file>` - Hide data within an image (steganography).
+1403. `/image steganography decode [image]` - Attempt to extract hidden data from an image.
+1404. `/music queue stats` - Show stats about the current queue (total duration, number of songs, unique artists).
+1405. `/music playlist stats <name>` - Show stats about a saved playlist.
+1406. `/confession stats` - Show statistics about confessions (total submitted, approved, rejected).
+1407. `/ask stats` - Show statistics about anonymous questions (total asked, answered).
+1408. `/profile leaderboard <field>` - Show leaderboards based on profile fields (e.g., reputation, marriage duration).
+1409. `/marry proposal list` - List pending marriage proposals.
+1410. `/marry accept [user]` - Accept a marriage proposal.
+1411. `/marry reject [user]` - Reject a marriage proposal.
+1412. `/leaderboard custom <metric_name>` - Show leaderboards for custom tracked metrics (if bot supports).
+1413. `/soundboard play sequence [sounds...]` - Play a sequence of soundboard sounds.
+1414. `/gpt summarize chat [channel] [limit]` - Use GPT to summarize recent chat messages.
+1415. `/gpt analyze sentiment chat [channel] [limit]` - Use GPT to analyze the overall sentiment of recent chat.
+1416. `/system health check` - Run a self-check on bot system resources and API connectivity.
+1417. `/user avatar steal <user>` - Get the URL of a user's avatar.
+1418. `/guild icon steal <guild_id>` - Get the URL of another server's icon (if bot is in it).
+1419. `/webhook clone <url> [new_channel] [new_name]` - Clone a webhook's settings to a new channel/name.
+1420. `/message format markdown <text>` - Show text formatted as Discord markdown.
+1421. `/role permissions neededby [user]` - List permissions a user needs to perform an action (hypothetical).
+1422. `/intent checker [command]` - Check which intents are required for a specific command.
+1423. `/color harmonies <hex_color> [type]` - Generate color harmonies (complementary, analogous, etc.).
+1424. `/unicode block list <block_name>` - List characters within a specific Unicode block.
+1425. `/timezone guess [location_name]` - Try to guess the timezone for a location name.
+1426. `/member list no_roles` - List members who have no roles.
+1427. `/member list bot_added` - List members who were added by bots.
+1428. `/purge edited [channel] [limit]` - Purge messages that have been edited.
+1429. `/invite link checker <invite_code>` - Check if an invite link is valid and get basic info.
+1430. `/level xp decay config [enable|disable] [rate] [inactive_days]` - Configure XP decay for inactivity.
+1431. `/level prestige system [enable|disable] [levels_per_prestige] [rewards]` - Configure a prestige system for leveling.
+1432. `/economy rob user [user] <amount>` - Attempt to steal currency (minigame, high risk).
+1433. `/economy crime [type]` - Commit a virtual crime for a chance of reward or penalty (minigame).
+1434. `/image generate style transfer [content_image] [style_image]` - Transfer the style of one image onto another.
+1435. `/image generate interpolate [image1] [image2] [steps]` - Generate intermediate frames between two images.
+1436. `/music sync playback [user]` - Attempt to sync music playback time with another user (requires external service support).
+1437. `/music share current` - Share the currently playing song to the chat.
+1438. `/server rules history` - Show the edit history of the server rules (if logged).
+1439. `/auditlog suspicious activity report` - Generate a report highlighting potentially suspicious audit log entries.
+1440. `/dynamic vc claim orphaned` - Allow users to claim dynamic VCs whose owner left.
+1441. `/role membership graph [role]` - Show a graph of how many members had a role over time.
+1442. `/ticket statistics [category|support_role]` - Show ticket resolution times, volume by category, etc.
+1443. `/starboard random` - Show a random message from the starboard.
+1444. `/ai chatbot memory [view|clear]` - View or clear the short-term memory of the AI chatbot.
+1445. `/ai image generator settings [view|set] [model|resolution|steps]` - Configure the AI image generator.
+1446. `/command cost view [command]` - Show the resource cost (e.g., API calls, processing time) of a command (if tracked).
+1447. `/user accent color [user]` - Show a user's profile accent color.
+1448. `/server locale distribution` - Show a chart of preferred language settings among server members (if available).
+1449. `/message character count <message_id>` - Count characters in a specific message.
+1450. `/channel message density [channel] [timeframe]` - Analyze the density of messages (messages per minute/hour).
+1451. `/translate auto config [channel] [target_language] [ignored_users|roles]` - Configure auto-translation settings.
+1452. `/voice leaderboard active` - Show leaderboard based on current voice activity duration.
+1453. `/command permission check [command] [user] [channel]` - Check if a user can run a command in a specific context.
+1454. `/error traceback <error_id>` - Show the full traceback for a logged error (owner/admin).
+1455. `/suggestion deadline <suggestion_id> <date>` - Set a deadline for feedback on a suggestion.
+1456. `/bugreport priority <bug_id> <level>` - Set the priority level for a bug report.
+1457. `/application template create [position] [questions...]` - Create a template for staff applications.
+1458. `/application template use [template_name]` - Start an application using a template.
+1459. `/purge include pinned [channel] [limit]` - Purge messages *including* pinned messages.
+1460. `/prune reason <reason>` - Set a default reason for pruning members.
+1461. `/channel permission visualizer [channel]` - Show a visual representation of permission overwrites.
+1462. `/role member export [role] [csv|json]` - Export a list of members with a specific role.
+1463. `/emoji pack export <pack_name>` - Export an emoji pack definition.
+1464. `/sticker pack import <pack_name> [file]` - Import a sticker pack from a definition file.
+1465. `/thread templates [create|use|list] <name> [channel]` - Create templates for starting threads.
+1466. `/forum post template [create|use|list] <name> [forum]` - Create templates for forum posts.
+1467. `/activity scheduler [activity_name] <time> <channel>` - Schedule a voice channel activity to be announced/started.
+1468. `/tag placeholders list` - List available placeholders (like username, channel) usable in tags.
+1469. `/image palette swap [image] [color_map]` - Swap colors in an image based on a mapping.
+1470. `/music playlist recommend <playlist_name>` - Recommend songs to add to a playlist based on its content.
+1471. `/confession anonymous reply <confession_id> <reply>` - Allow users to anonymously reply to a posted confession.
+1472. `/profile commend [user] <reason>` - Give a special commendation visible on a user's profile.
+1473. `/pet accessories [list|buy|equip] [item_name]` - Equip accessories on virtual pets.
+1474. `/leaderboard activity score [timeframe]` - Show leaderboard based on a combined activity score (messages, voice, reactions).
+1475. `/soundboard tag [sound_name] [add|remove|list] <tag>` - Add tags to organize soundboard sounds.
+1476. `/gpt code review <code>` - Ask GPT to review a piece of code for potential issues.
+1477. `/gpt generate documentation <code>` - Ask GPT to generate documentation comments for code.
+1478. `/system info` - Show detailed host system information (OS, CPU, RAM).
+1479. `/user banner [user]` - Display a user's profile banner.
+1480. `/guild banner steal <guild_id>` - Get the URL of another server's banner (if bot is in it and boosted).
+1481. `/webhook relay [source_url] [target_urls...]` - Relay messages from one webhook to others.
+1482. `/message format codeblock <language> <text>` - Format text into a code block.
+1483. `/role permissions visualizer [role]` - Visualize a role's permissions in a user-friendly way.
+1484. `/intent simulator [event_type] [data]` - Simulate receiving a gateway event for testing.
+1485. `/color schemes generate [keyword]` - Generate color schemes based on a keyword or theme.
+1486. `/unicode font support <character> [font_name]` - Check if a font supports a specific character.
+1487. `/timezone events [timezone]` - List upcoming world events (holidays, observances) in a timezone.
+1488. `/member list by join date [date_range]` - List members who joined within a specific date range.
+1489. `/member list by account age [age_range]` - List members whose accounts were created within a specific age range.
+1490. `/purge until <message_id> [channel]` - Purge messages *up to* (and including) a specific message.
+1491. `/invite leaderboard weekly` - Show the invite leaderboard for the past week.
+1492. `/level role rewards remove <level> [role]` - Remove a role reward for a specific level.
+1493. `/level leaderboard server` - Show the server-specific leveling leaderboard (if bot supports global levels).
+1494. `/economy bank transfer [user] <amount>` - Transfer currency to another user's bank account.
+1495. `/economy bank balance [user]` - Check a user's bank balance.
+1496. `/economy deposit <amount>` - Deposit currency into your bank.
+1497. `/economy withdraw <amount>` - Withdraw currency from your bank.
+1498. `/image generate inpaint [image] [mask_image] <prompt>` - Replace a masked area of an image using AI.
+1499. `/image generate outpaint [image] <prompt>` - Extend an image beyond its borders using AI.
+1500. `/music history graph [timeframe]` - Show a graph of your music listening history.
+1501. `/music genre stats [timeframe]` - Show stats about the genres of music you've listened to.
+1502. `/server rules accept log` - Show a log of users who accepted the server rules (if tracked).
+1503. `/auditlog alert config [action_type] [channel]` - Configure alerts for specific audit log actions.
+1504. `/dynamic vc log` - Show a log of dynamic voice channels being created/deleted.
+1505. `/role membership log [role]` - Show a log of users joining/leaving a specific role (if tracked).
+1506. `/ticket feedback request [ticket_id]` - Request feedback from the user after a ticket is closed.
+1507. `/starboard delete entry [message_id]` - Manually remove a message from the starboard (admin).
+1508. `/ai chatbot context [set|view] <context_string>` - Provide persistent context for the AI chatbot's conversations.
+1509. `/ai image compare models <prompt>` - Generate an image using the same prompt with different AI models.
+1510. `/command dependencies [command]` - List other commands or modules required by a specific command.
+1511. `/user banner history [user]` - Show previous profile banners of a user (if logged).
+1512. `/server preferred locale set <locale>` - Change the server's preferred language setting.
+1513. `/message character frequency [channel] [limit]` - Analyze the frequency of characters used in messages.
+1514. `/channel voice user stats [channel]` - Show statistics about users in a voice channel (join/leave times, duration).
+1515. `/translate glossary [add|remove|list] <term> <translation>` - Manage a custom glossary for translations.
+1516. `/voice activity summary [user] [timeframe]` - Generate a summary report of a user's voice activity.
+1517. `/command permission override [command] [role|user|channel] [allow|deny]` - Create specific overrides for command permissions.
+1518. `/error details <error_id>` - Show detailed context and variables associated with a logged error (owner).
+1519. `/suggestion vote <suggestion_id> [up|down|neutral]` - Vote on a suggestion.
+1520. `/bugreport link issue <bug_id> <issue_tracker_url>` - Link a bug report to an external issue tracker.
+1521. `/application withdraw <app_id>` - Withdraw your own staff application.
+1522. `/purge keep reactions [channel] [limit]` - Purge messages without specific reactions.
+1523. `/prune notify [enable|disable]` - Notify users before they are pruned for inactivity.
+1524. `/channel permission inheritance [channel]` - Show how permissions are inherited from category/server settings.
+1525. `/role member import [role] [file]` - Add members to a role from a list in a file.
+1526. `/emoji pack update <pack_name> [file]` - Update an existing emoji pack from a definition file.
+1527. `/sticker pack gallery search <query>` - Search public galleries for sticker packs.
+1528. `/thread auto archive [thread] <duration>` - Set a custom auto-archive duration for a thread.
+1529. `/forum default sort [forum_channel] [latest|creation]` - Set the default sort order for posts in a forum.
+1530. `/activity config [activity_name] [setting] [value]` - Configure settings for specific voice channel activities (if applicable).
+1531. `/tag group [create|delete|add|remove|list] <group_name> [tag_name]` - Organize tags into groups.
+1532. `/image color search [hex_color]` - Search for images dominated by a specific color.
+1533. `/music lyrics quiz [song]` - Start a quiz based on song lyrics.
+1534. `/confession search <query>` - Search through posted confessions (admin).
+1535. `/profile relationship status [set|clear]` - Set a fun relationship status on your profile.
+1536. `/pet park [interact]` - Interact with other users' pets in a virtual park.
+1537. `/leaderboard command usage [command]` - Show the leaderboard for usage of a specific command.
+1538. `/soundboard upload multiple [files...]` - Upload multiple sounds to the soundboard at once.
+1539. `/gpt code debugger <code>` - Ask GPT to help debug a piece of code.
+1540. `/gpt translate code <source_language> <target_language> <code>` - Ask GPT to translate code between languages.
+1541. `/system database stats` - Show statistics about the bot's database (size, query times).
+1542. `/user avatar default check [role]` - Check users with a role for default avatars.
+1543. `/guild splash steal <guild_id>` - Get the URL of another server's invite splash image.
+1544. `/webhook test send [url]` - Send a predefined test message to a webhook.
+1545. `/message format table [data]` - Format data into a Discord-friendly markdown table.
+1546. `/role permissions matrix` - Display a matrix showing which roles have which key permissions.
+1547. `/api endpoint status [endpoint]` - Check the status and latency of a specific Discord API endpoint.
+1548. `/color name <hex_color>` - Get the closest matching name for a hex color code.
+1549. `/unicode confusables <character>` - List characters that look similar to the input character (confusables).
+1550. `/timezone current DST <timezone>` - Check if Daylight Saving Time is currently active for a timezone.
+1551. `/member list by game [game_name]` - List members currently playing a specific game.
+1552. `/member list by status [status]` - List members with a specific status (online, idle, dnd).
+1553. `/purge from user list [users...] [channel] [limit]` - Purge messages from a list of specified users.
+1554. `/invite analytics compare [codes...]` - Compare analytics between multiple invite codes.
+1555. `/level leaderboard compare [user1] [user2]` - Compare the level/XP progress between two users.
+1556. `/level role rewards check [user]` - Check which level role rewards a user is eligible for/has.
+1557. `/economy stocks portfolio value [user]` - Show the current total value of a user's stock portfolio.
+1558. `/economy crypto portfolio value [user]` - Show the current total value of a user's crypto portfolio.
+1559. `/image generate batch <prompt> [count]` - Generate multiple images from the same prompt.
+1560. `/image search reverse engine [google|tineye|yandex] [image]` - Perform reverse image search using a specific engine.
+1561. `/music sync start session` - Start a listening party session where playback is synced.
+1562. `/music sync join session <session_id>` - Join a music sync session.
+1563. `/server rules language [add|remove|set] <language> <rules_text>` - Set server rules in multiple languages.
+1564. `/auditlog export [format] [filters]` - Export audit log entries to a file.
+1565. `/dynamic vc naming scheme [set|view] <scheme>` - Customize the naming scheme for dynamic voice channels (e.g., using game name).
+1566. `/role mention graph [role]` - Show a graph of how often a role has been mentioned over time.
+1567. `/ticket feedback view [ticket_id]` - View feedback submitted for a closed ticket.
+1568. `/starboard leaderboard [timeframe]` - Show users whose messages have received the most stars.
+1569. `/ai chatbot personality gallery [browse|set] <name>` - Choose a predefined personality for the AI chatbot.
+1570. `/ai image checkpoint list` - List available models/checkpoints for the AI image generator.
+1571. `/command execution log [command] [limit]` - Show a log of recent executions for a specific command.
+1572. `/user banner steal <user>` - Get the URL of a user's profile banner image.
+1573. `/server locale setting <locale>` - Change the server's primary language setting.
+1574. `/message reaction stats <message_id>` - Show detailed statistics about reactions on a message.
+1575. `/channel category stats [category]` - Show aggregated stats for all channels within a category.
+1576. `/translate language support` - List all languages supported by the translation command.
+1577. `/voice user mute log [user]` - Show a log of when a user was server muted/unmuted in voice.
+1578. `/command permission hierarchy` - Explain the hierarchy for command permission overrides (e.g., user > role > channel).
+1579. `/error report template` - Provide a template for users reporting bot errors.
+1580. `/suggestion merge <suggestion_id_1> <suggestion_id_2>` - Merge two similar suggestions.
+1581. `/bugreport severity <bug_id> <level>` - Set the severity level for a bug report (e.g., critical, minor).
+1582. `/application edit <app_id> [answers...]` - Edit your submitted staff application (if allowed).
+1583. `/purge keep user [user] [channel] [limit]` - Purge messages *except* those from a specific user.
+1584. `/prune list roles [roles...]` - List members who would be pruned based on having specific roles (or lack thereof).
+1585. `/channel permission check all [permission]` - Check all channels to see where a specific permission is granted/denied.
+1586. `/role member log [role]` - Show a log of members being added/removed from a role (if tracked).
+1587. `/emoji pack gallery [submit|browse]` - Submit or browse user-created emoji packs.
+1588. `/sticker pack creator [sticker]` - Show who created a specific server sticker.
+1589. `/thread starter [thread]` - Show who started a specific thread.
+1590. `/forum post creator [post_id]` - Show who created a specific forum post.
+1591. `/activity game stats [game_name] [user]` - Show a user's stats for a specific voice channel game (e.g., Poker wins).
+1592. `/tag search content <query>` - Search within the content of tags.
+1593. `/image color extractor [image] [count]` - Extract the most dominant colors from an image.
+1594. `/music lyrics translate <language> [song]` - Translate lyrics to another language.
+1595. `/confession block user [user]` - Prevent a user from submitting confessions (admin).
+1596. `/profile visitor log [view|clear]` - See who has recently viewed your profile (optional, privacy).
+1597. `/pet marketplace [list|buy|sell]` - A player-driven marketplace for virtual pets/items.
+1598. `/leaderboard timezones` - Show leaderboard based on user timezone diversity (just for fun).
+1599. `/soundboard queue [add|view|clear] [sound]` - Queue up soundboard sounds to play sequentially.
+1600. `/gpt rewrite email <email_text> [tone]` - Rewrite an email draft with a different tone (professional, casual, etc.).
+1601. `/gpt generate meeting agenda <topic> [points...]` - Generate a meeting agenda based on a topic.
+1602. `/system maintenance schedule [set|view] [time] [message]` - Schedule planned maintenance mode (owner).
+1603. `/user nickname history [user]` - Show a user's past nicknames in the server (if logged).
+1604. `/guild discovery splash steal <guild_id>` - Get the URL of another server's discovery splash.
+1605. `/webhook format message <json_payload>` - Preview how a webhook payload will look in Discord.
+1606. `/message format diff <text1> <text2>` - Show the differences between two blocks of text.
+1607. `/role permissions common [roles...]` - Find common permissions shared between multiple roles.
+1608. `/api request raw <method> <endpoint> [json_body]` - Make a raw authenticated Discord API request (owner, dangerous).
+1609. `/colorblind simulator [image] [type]` - Simulate how an image looks to users with different types of colorblindness.
+1610. `/unicode normalize <text> [form]` - Normalize Unicode text (NFC, NFD, etc.).
+1611. `/timezone offset <timezone>` - Show the current UTC offset for a timezone.
+1612. `/member list pending verification` - List members who haven't passed server verification checks (if applicable).
+1613. `/member list suspicious [criteria]` - List members matching potentially suspicious criteria (e.g., new account, no avatar, recent join).
+1614. `/purge urls [domains...] [channel] [limit]` - Purge messages containing links to specific domains.
+1615. `/invite creator check [invite_code]` - See who created a specific invite.
+1616. `/level xp curve [view|set] [formula]` - Configure the XP formula needed for each level.
+1617. `/level leaderboard role [role]` - Show the leveling leaderboard filtered by users with a specific role.
+1618. `/economy item shop [list|buy|sell] [item]` - View or interact with the server's item shop.
+1619. `/economy item info [item]` - Show details and price of a shop item.
+1620. `/image generate controlnet [image] [control_image] <prompt>` - Guide AI image generation using ControlNet models.
+1621. `/image search similar [image]` - Find visually similar images online.
+1622. `/music autoplay config [genre_bias|playlist_source]` - Configure how autoplay selects songs.
+1623. `/music queue duration` - Show the total duration of the current music queue.
+1624. `/server rules diff [revision1] [revision2]` - Show changes between versions of server rules (if logged).
+1625. `/auditlog anomaly detection [enable|disable]` - Enable automatic detection of unusual audit log patterns.
+1626. `/dynamic vc idle cleanup [enable|disable] [duration]` - Automatically delete empty dynamic VCs after a period.
+1627. `/role permission grant temp [role] [permission] <duration>` - Temporarily grant a permission to a role.
+1628. `/ticket survey config [enable|disable] [questions...]` - Configure post-ticket surveys.
+1629. `/starboard message context <message_id>` - Show messages sent before and after a starred message.
+1630. `/ai chatbot forget <topic>` - Instruct the AI chatbot to try and forget about a specific topic.
+1631. `/ai image style list` - List available preset styles for AI image generation.
+1632. `/command usage heatmap [command]` - Show a heatmap of when a command is most frequently used.
+1633. `/user profile card [user]` - Generate an image card summarizing a user's profile.
+1634. `/server banner generator [template] [text]` - Generate a simple server banner image from a template.
+1635. `/message reaction roles summary [message_id]` - Show a summary of configured reaction roles on a message.
+1636. `/channel topic history [channel]` - Show the history of topic changes for a channel (if logged).
+1637. `/translate clipboard <language>` - Translate text currently on your clipboard (requires client integration/permissions).
+1638. `/voice user deafen log [user]` - Show log of when a user was server deafened/undeafened.
+1639. `/command permission check multiple [commands...] [user]` - Check permissions for multiple commands at once.
+1640. `/error statistics [type|command]` - Show statistics about errors (frequency, types, commands involved).
+1641. `/suggestion subscribe <suggestion_id>` - Get notified about updates to a specific suggestion.
+1642. `/bugreport subscribe <bug_id>` - Get notified about updates to a specific bug report.
+1643. `/application review [start|next|previous] <app_id>` - Start an interactive review process for applications.
+1644. `/purge keep role [role] [channel] [limit]` - Purge messages *except* those from users with a specific role.
+1645. `/prune export list [days] [role]` - Export a list of members who *would* be pruned.
+1646. `/channel permission check role [role] [permission]` - Check all channels for where a role has a specific permission overwrite.
+1647. `/role member history [role]` - Show the history of members joining/leaving a role (if tracked).
+1648. `/emoji pack suggest [emoji]` - Suggest an emoji to be added to a server pack.
+1649. `/sticker pack usage stats [pack_name]` - Show usage statistics for a sticker pack.
+1650. `/thread owner [thread]` - Show the owner/creator of a thread.
+1651. `/forum stats [forum_channel]` - Show statistics for a forum channel (post count, reply count, active users).
+1652. `/activity leaderboard session [activity_name]` - Show leaderboard for the current session of a voice activity.
+1653. `/tag ownership transfer request [tag] [user]` - Request ownership transfer of a tag you created.
+1654. `/image average color [image]` - Calculate the average color of an image.
+1655. `/music lyrics game` - Start a game where users guess the song from lyrics snippets.
+1656. `/confession reply view <confession_id>` - View anonymous replies to a confession (admin).
+1657. `/profile background suggest <image_url>` - Suggest a background image for admin approval.
+1658. `/pet daycare [checkin|checkout]` - Check pets into a daycare to gain passive benefits (economy).
+1659. `/leaderboard top messages [timeframe]` - Show users who sent the most messages.
+1660. `/soundboard record [start|stop]` - Record audio in a voice channel to create a soundboard clip (requires consent/config).
+1661. `/gpt generate summary url <url>` - Ask GPT to summarize the content of a webpage.
+1662. `/gpt generate code comments <code>` - Alias for `/gpt generate documentation`.
+1663. `/system update check` - Check if a new version of the bot software is available (owner).
+1664. `/user avatar history compare [user] [index1] [index2]` - Compare two previous avatars of a user.
+1665. `/guild widget image [guild_id]` - Get the server widget image URL.
+1666. `/webhook delete multiple [urls...]` - Delete multiple webhooks at once.
+1667. `/message format timestamp <datetime_string> [style]` - Format a date/time string into various Discord timestamp styles.
+1668. `/role permissions difference [role1] [role2]` - Show permissions role1 has but role2 doesn't, and vice-versa.
+1669. `/api status history` - Show historical uptime/status for the Discord API.
+1670. `/color blend <color1> <color2> [ratio]` - Blend two colors together.
+1671. `/unicode emoji source <emoji>` - Show the Unicode code points that make up a complex emoji.
+1672. `/timezone map compare [tz1] [tz2]` - Show a map highlighting two timezones and their difference.
+1673. `/member list missing role [role]` - List members who *do not* have a specific role.
+1674. `/member list nickname [regex_pattern]` - List members whose nicknames match a regex pattern.
+1675. `/purge reactions specific <emoji> [channel] [limit]` - Purge messages containing a specific reaction.
+1676. `/invite usage graph [invite_code] [timeframe]` - Show a graph of invite usage over time.
+1677. `/level xp modifier temp [user] <multiplier> <duration>` - Grant a temporary XP multiplier to a user.
+1678. `/level leaderboard weekly` - Show the leveling leaderboard for the current week.
+1679. `/economy stocks buy limit <symbol> <price> <amount>` - Place a limit buy order for stocks.
+1680. `/economy crypto sell stoploss <symbol> <price> <amount>` - Place a stop-loss sell order for crypto.
+1681. `/image generate restore faces [image]` - Attempt to fix distorted faces in AI-generated images.
+1682. `/image ocr translate [image] <language>` - Extract text from an image and translate it.
+1683. `/music queue analyze` - Analyze the current queue for genre diversity, average song length, etc.
+1684. `/music skip ratio [set|view] <ratio>` - Set the ratio of votes needed to skip a song.
+1685. `/server rules translate <language>` - Display the server rules translated into a specific language.
+1686. `/auditlog user summary [user] [timeframe]` - Summarize a user's actions recorded in the audit log.
+1687. `/dynamic vc transfer ownership [channel] [user]` - Transfer ownership of a dynamic VC.
+1688. `/role permissions optimize [role]` - Suggest removing potentially redundant permissions from a role.
+1689. `/ticket merge [ticket_id_1] [ticket_id_2]` - Merge two related tickets together.
+1690. `/starboard ignore message <message_id>` - Prevent a specific message from ever appearing on the starboard.
+1691. `/ai chatbot rate limit [set|view] [limit] [duration]` - Set rate limits for AI chatbot usage.
+1692. `/ai image rate limit [set|view]` - Set rate limits for AI image generation.
+1693. `/command cooldown bypass [role|user]` - Allow specific roles/users to bypass command cooldowns.
+1694. `/user avatar dominant color [user]` - Get the dominant color of a user's avatar.
+1695. `/server banner dominant color` - Get the dominant color of the server banner.
+1696. `/message reaction role cleanup` - Remove reaction role entries for deleted messages or roles.
+1697. `/channel name history [channel]` - Show the history of name changes for a channel (if logged).
+1698. `/translate suggestion <source_text> <language> <suggested_translation>` - Suggest an improvement for a translation.
+1699. `/voice user activity graph [user] [timeframe]` - Show a graph of a user's voice activity over time.
+1700. `/command permission simulator [user] [channel] [command]` - Simulate running a command to see if permissions pass.
+1701. `/error subscribe [type|command]` - Get notified when specific errors occur (admin).
+1702. `/suggestion deadline notify <suggestion_id>` - Notify users about an upcoming feedback deadline.
+1703. `/bugreport reproduce steps <bug_id> <steps>` - Add steps to reproduce a bug.
+1704. `/application scoring [app_id] [criteria] <score>` - Score applications based on predefined criteria.
+1705. `/purge keep filetype <extension> [channel] [limit]` - Purge messages *except* those with specific file types.
+1706. `/prune message user [user]` - Send a custom message to users before pruning them.
+1707. `/channel permission check category [category] [permission]` - Check all channels in a category for a permission overwrite.
+1708. `/role mention check [role]` - Check if a role is currently mentionable.
+1709. `/emoji pack install <pack_name>` - Add all emojis from a known pack to the server.
+1710. `/sticker pack install <pack_name>` - Add all stickers from a known pack.
+1711. `/thread notification settings [thread] [all|mentions|none]` - Change your notification settings for a specific thread.
+1712. `/forum notification settings [forum] [all|mentions|none]` - Change notification settings for a forum channel.
+1713. `/activity stats leaderboard [activity_name]` - Show the leaderboard for a specific voice activity.
+1714. `/tag info detailed [tag]` - Show detailed info including creation date, last used, total uses.
+1715. `/image histogram [image]` - Show the color histogram of an image.
+1716. `/music quiz leaderboard` - Show the leaderboard for the lyrics quiz game.
+1717. `/confession anonymous report <confession_id> [reason]` - Allow users to anonymously report a problematic confession.
+1718. `/profile relationship goals [set|view] <text>` - Set fun relationship goals on your profile.
+1719. `/pet hospital [heal|revive]` - Heal or revive injured virtual pets (economy).
+1720. `/leaderboard server age` - Show leaderboard based on how long users have been in the server.
+1721. `/soundboard play loop <sound_name> [count]` - Loop a soundboard sound a specific number of times.
+1722. `/gpt analyze writing <text>` - Ask GPT to analyze writing style, tone, and suggest improvements.
+1723. `/gpt generate test cases <code>` - Ask GPT to generate test cases for a piece of code.
+1724. `/system network latency [destination]` - Measure network latency to a specific host/IP.
+1725. `/user avatar check animated [role]` - Check users with a role for animated avatars.
+1726. `/guild template apply simulate <code>` - Simulate applying a server template without making changes.
+1727. `/webhook list all` - List all webhooks created by the bot in the server.
+1728. `/message format spoiler <text>` - Format text as a spoiler.
+1729. `/role permissions template create <name> [permissions...]` - Create a template for a set of permissions.
+1730. `/role permissions template apply <name> [role]` - Apply a permission template to a role.
+1731. `/api rate limit simulator [count] [duration]` - Simulate hitting API rate limits for testing.
+1732. `/color info <hex|rgb|hsl|name>` - Get detailed information about a color (conversions, name, etc.).
+1733. `/unicode block info <block_name>` - Show information about a Unicode block (range, characters).
+1734. `/timezone world map` - Show a world map with current time zones overlaid.
+1735. `/member list joined today` - List members who joined the server today.
+1736. `/member list account age new <days>` - List members whose Discord accounts are newer than X days.
+1737. `/purge has link [channel] [limit]` - Purge messages that contain any URL/link.
+1738. `/invite summary` - Show a summary of server invites (total uses, active invites, top inviters).
+1739. `/level xp boost server [multiplier] <duration> [reason]` - Apply a server-wide XP boost event.
+1740. `/level leaderboard inactive [days]` - Show users who haven't gained XP recently.
+1741. `/economy leaderboard networth [user]` - Show leaderboard based on combined balance + item value.
+1742. `/economy audit log [user] [action]` - View a log of a user's economic transactions (admin).
+1743. `/image generate remix [image1] [image2] [prompt]` - Remix elements of two images based on a prompt.
+1744. `/image search filter [license|size|type] <query>` - Filter image search results by license, size, or type.
+1745. `/music autoplay next` - Show which song autoplay will play next.
+1746. `/music queue vote [add|remove] <query>` - Allow users to vote on songs to add to the queue.
+1747. `/server rules review request` - Request moderators to review updated server rules.
+1748. `/auditlog revert action <action_id>` - Attempt to revert an action recorded in the audit log (very risky, limited support).
+1749. `/dynamic vc size adjust [enable|disable]` - Automatically adjust dynamic VC user limits based on usage.
+1750. `/role permissions history compare [role] [date1] [date2]` - Compare role permissions between two points in time (if logged).
+1751. `/ticket priority auto assign [keywords] <level>` - Automatically assign ticket priority based on keywords.
+1752. `/starboard pin message <message_id>` - Pin a message when it reaches the starboard threshold.
+1753. `/ai chatbot thread create <topic>` - Create a dedicated thread for a conversation with the AI chatbot.
+1754. `/ai image generator queue [view|clear]` - View or clear the queue for AI image generation jobs.
+1755. `/command execution time [command]` - Show average execution time for a command.
+1756. `/user nickname check duplicates` - Find users with the same nickname.
+1757. `/server boost message config [channel|message|image]` - Configure messages sent when server gains/loses boost levels.
+1758. `/message reaction role limit [message_id] <limit>` - Set a max number of reaction roles users can pick from a message.
+1759. `/channel activity report [channel] [timeframe]` - Generate a report summarizing channel activity.
+1760. `/translate custom engine [add|remove|set] <name> <api_details>` - Configure use of custom translation engines.
+1761. `/voice user microphone check [user]` - Ask bot to check if it can detect audio from a user (requires listening permissions).
+1762. `/command permission debug [user] [channel] [command]` - Step-by-step debug of why a user can/cannot run a command.
+1763. `/error report external <error_id> [url]` - Link an internal error report to an external tracker.
+1764. `/suggestion discussion thread <suggestion_id>` - Create a dedicated thread for discussing a suggestion.
+1765. `/bugreport link commit <bug_id> <commit_hash>` - Link a bug report to the commit that fixed it.
+1766. `/application template list` - List available staff application templates.
+1767. `/purge keep pattern <regex> [channel] [limit]` - Purge messages *except* those matching a regex.
+1768. `/prune simulate detailed [days] [role]` - Show exactly which users would be pruned.
+1769. `/channel permission check user [user] [permission]` - Check all channels for where a user has a specific permission overwrite.
+1770. `/role hoist check` - Check which roles are currently set to be hoisted.
+1771. `/emoji search external <query>` - Search external emoji galleries (e.g., emoji.gg).
+1772. `/sticker search external <query>` - Search external sticker galleries.
+1773. `/thread auto add users [thread] [role]` - Automatically add users with a role to new threads.
+1774. `/forum auto tag [forum_channel] [keywords] <tag>` - Automatically tag new posts based on keywords.
+1775. `/activity user stats [user]` - Show a user's overall stats across different voice activities.
+1776. `/tag backup [create|load]` - Backup or load server tags from a file.
+1777. `/image glitch art [image] [options]` - Create glitch art with specific parameters.
+1778. `/music lyrics analyze <song>` - Analyze lyrics for sentiment, word frequency, etc.
+1779. `/confession schedule post <confession_id> <time>` - Schedule an approved confession to be posted later.
+1780. `/profile status emoji [set|clear] <emoji>` - Set a status emoji on your profile.
+1781. `/pet fusion [pet1] [pet2]` - Attempt to fuse two pets into a new one (minigame).
+1782. `/leaderboard reaction score [timeframe]` - Show leaderboard based on combined reactions given/received.
+1783. `/soundboard play private [sound_name]` - Play a soundboard sound only you can hear.
+1784. `/gpt generate presentation outline <topic> [slides]` - Generate an outline for a presentation.
+1785. `/gpt generate email subject <email_body>` - Suggest email subject lines based on the body text.
+1786. `/system process kill <pid>` - Kill a specific process on the bot host (owner, dangerous).
+1787. `/user status history [user] [timeframe]` - Show user status changes over a specific period.
+1788. `/guild features list` - List all available Discord guild features and server's status.
+1789. `/webhook modify <url> [name|avatar|channel]` - Modify an existing webhook's properties.
+1790. `/message format embed visualizer [json]` - Visualize an embed JSON as it would appear in Discord.
+1791. `/role permissions missing [role] [permissions...]` - List specified permissions that a role *lacks*.
+1792. `/api debug request <request_id>` - Get debug information for a specific outgoing API request made by the bot.
+1793. `/color palette generate [image|keyword]` - Generate a color palette from an image or keyword.
+1794. `/unicode text tools [upsidedown|reverse|zalgo]` - Apply various fun Unicode text transformations.
+1795. `/timezone city <city_name>` - Find the timezone for a specific city.
+1796. `/member list booster` - List all current server boosters.
+1797. `/member list recent leave [count]` - List the last X members who left the server.
+1798. `/purge has attachment [channel] [limit]` - Purge messages that contain any attachment.
+1799. `/invite settings view` - View current server invite settings (e.g., max age, max uses defaults).
+1800. `/level xp leaderboard [channel]` - Show XP leaderboard specifically for activity within a channel.
+1801. `/level reset server` - Reset all level/XP data for the server (admin, dangerous).
+1802. `/economy shop log` - View a log of transactions from the server shop (admin).
+1803. `/economy gambling stats [user]` - Show a user's overall gambling statistics (wins, losses, net).
+1804. `/image generate interpolate gif [image1] [image2] [steps]` - Create a GIF interpolating between two images.
+1805. `/image caption bulk [images...] <caption_template>` - Add captions to multiple images using a template.
+1806. `/music radio stations [list|add|remove] <name> <url>` - Manage custom internet radio stations.
+1807. `/music queue import spotify <playlist_url>` - Import a Spotify playlist into the queue.
+1808. `/server rules accept role [role]` - Assign a role to users who accept the rules.
+1809. `/auditlog webhook filter [url] [action_types]` - Filter which audit log events get sent to a webhook.
+1810. `/dynamic vc prefix [set|view] <prefix>` - Set a prefix for the names of dynamic voice channels.
+1811. `/role permissions remove temp [role] [permission]` - Remove a temporarily granted permission early.
+1812. `/ticket export [format] [filters]` - Export ticket data (metadata, transcripts) based on filters.
+1813. `/starboard halloffame [count]` - Show messages with the highest star counts ever.
+1814. `/ai chatbot training data [add|remove|view] <text>` - Add/remove custom training data snippets (advanced).
+1815. `/ai image model manager [list|load|unload] <model_name>` - Manage loaded AI image generation models (owner).
+1816. `/command alias check <alias>` - Check if an alias is already taken (globally or personally).
+1817. `/user banner dominant color [user]` - Get the dominant color of a user's profile banner.
+1818. `/server splash dominant color` - Get the dominant color of the server invite splash.
+1819. `/message reaction role sync [message_id]` - Check and fix users who have roles inconsistent with reactions.
+1820. `/channel slowmode schedule [channel] <cron_time> <seconds>` - Schedule slowmode to turn on/off at specific times.
+1821. `/translate engine status` - Check the status of the configured translation engine/API.
+1822. `/voice channel status [channel]` - Show status of a voice channel (bitrate, user limit, region, connected users).
+1823. `/command permission export` - Export the bot's command permission configuration.
+1824. `/command permission import [file]` - Import command permissions from a configuration file.
+1825. `/error log rotation config [size|time]` - Configure automatic rotation/pruning of error logs.
+1826. `/suggestion link issue <suggestion_id> <issue_url>` - Link a suggestion to an external issue tracker item.
+1827. `/bugreport unresolve <bug_id>` - Reopen a previously resolved bug report.
+1828. `/application archive <app_id>` - Archive an old staff application.
+1829. `/purge keep pinned only [channel] [limit]` - Purge all messages *except* pinned ones.
+1830. `/prune list exempt` - List users/roles currently exempt from pruning.
+1831. `/channel permission compare [channel1] [channel2]` - Compare permission overwrites between two channels.
+1832. `/role hierarchy position [role]` - Show the numerical position of a role in the hierarchy.
+1833. `/emoji upload multiple [files...] [names...]` - Upload multiple emoji images at once.
+1834. `/sticker upload multiple [files...] [names...]` - Upload multiple sticker files at once.
+1835. `/thread list user [user]` - List threads a user is currently participating in.
+1836. `/forum post stats [post_id]` - Show stats for a forum post (views, replies, reactions).
+1837. `/activity recommend` - Recommend a voice channel activity based on currently connected users.
+1838. `/tag execute permission [tag_name] [role|user]` - Set who can execute a tag (if runnable).
+1839. `/image text outline [image] [text] [color] [outline_color]` - Add text with an outline.
+1840. `/music lyrics source [song]` - Show the source/provider of the lyrics.
+1841. `/confession edit <confession_id> <new_text>` - Edit a confession before it's posted (admin).
+1842. `/profile field custom create <name> <type>` - Create custom fields for user profiles (admin).
+1843. `/profile field custom set <field_name> <value>` - Set a value for a custom profile field.
+1844. `/pet training [pet_name] [skill]` - Train virtual pets in different skills.
+1845. `/leaderboard custom metric [metric_name]` - Show leaderboard for a specific custom metric.
+1846. `/soundboard download <sound_name>` - Download the audio file for a soundboard sound.
+1847. `/gpt dialogue generate <characters> <scenario>` - Generate dialogue between characters in a scenario.
+1848. `/gpt code optimize <code>` - Ask GPT for suggestions on optimizing code performance or readability.
+1849. `/system disk io stats` - Show disk read/write statistics.
+1850. `/user avatar animated check [role]` - Check users with a role for animated avatars.
+1851. `/guild roles export [format]` - Export all server roles and their permissions.
+1852. `/webhook permissions check [url]` - Verify if the bot has permissions to send messages via a webhook URL.
+1853. `/message format quote <text>` - Format text as a Discord block quote.
+1854. `/role permissions effective user [user] [role]` - Show the effective permissions a user gets *from* a specific role.
+1855. `/api latency graph [endpoint] [timeframe]` - Graph the latency to a Discord API endpoint over time.
+1856. `/color gradient generate [color1] [color2] [steps]` - Generate a color gradient between two colors.
+1857. `/unicode emoji combinations [emoji]` - Show valid ZWJ sequences or combinations for an emoji.
+1858. `/timezone location <lat> <lon>` - Find the timezone for a specific latitude/longitude.
+1859. `/member list roleless` - Alias for `/member list no_roles`.
+1860. `/member list timeout` - List members currently in timeout.
+1861. `/purge has sticker [channel] [limit]` - Purge messages containing stickers.
+1862. `/invite prune simulate [min_uses] [max_age]` - Simulate pruning invites without actually deleting them.
+1863. `/level xp curve graph` - Show a graph of the XP required per level.
+1864. `/level leaderboard monthly` - Show the leveling leaderboard for the current month.
+1865. `/economy stocks order book <symbol>` - Show the current order book (bids/asks) for a stock.
+1866. `/economy crypto price alert list` - List your active crypto price alerts.
+1867. `/image generate diffusers list` - List available diffusion models/schedulers.
+1868. `/image search google lens [image]` - Perform a Google Lens search on an image.
+1869. `/music queue suggest [count]` - Suggest songs to add to the queue based on current content.
+1870. `/music dj mode [enable|disable]` - Enable DJ mode where only specific roles can control music.
+1871. `/server rules last updated` - Show when the server rules were last updated (if tracked).
+1872. `/auditlog ip lookup [ip_address]` - Look up geolocation info for an IP found in audit logs.
+1873. `/dynamic vc category [set|view] <category>` - Set the category where new dynamic VCs are created.
+1874. `/role permissions log search <role> <permission> [timeframe]` - Search permission change logs for a role.
+1875. `/ticket close survey results [ticket_id]` - View results of a post-ticket survey.
+1876. `/starboard leaderboard user [user]` - Show how many stars a specific user's messages have received.
+1877. `/ai chatbot interaction log [limit]` - View a log of recent interactions with the AI chatbot.
+1878. `/ai image generation history [user] [limit]` - View a user's AI image generation history.
+1879. `/command popularity list` - List commands sorted by recent popularity/usage.
+1880. `/user profile background history [user]` - Show previous profile backgrounds used by a user (if logged).
+1881. `/server welcome message test [user]` - Test the welcome message using a specific user's details.
+1882. `/message reaction roles check [message_id]` - Check the status and configuration of reaction roles on a message.
+1883. `/channel lock schedule [channel] <cron_time> [duration]` - Schedule channel locking/unlocking.
+1884. `/translate language name <language_code>` - Get the common name for a language code (e.g., 'en' -> 'English').
+1885. `/voice channel recording [start|stop] [channel]` - Record audio in a voice channel (requires significant setup, consent, storage).
+1886. `/command permission list roles [command]` - List roles that have explicit allow/deny permissions for a command.
+1887. `/error log search <query>` - Search the error log for specific keywords or error types.
+1888. `/suggestion anonymous [toggle]` - Allow submitting suggestions anonymously.
+1889. `/bugreport anonymous [toggle]` - Allow submitting bug reports anonymously.
+1890. `/application view anonymous [app_id]` - View an application with applicant info anonymized (if supported).
+1891. `/purge keep link domain [domain] [channel] [limit]` - Purge messages *except* those linking to a specific domain.
+1892. `/prune inactivity threshold [set|view] <days>` - Set the number of days of inactivity before pruning.
+1893. `/channel permission list templates` - List available channel permission templates.
+1894. `/role hierarchy check loops` - Check for potential loops or inconsistencies in the role hierarchy.
+1895. `/emoji usage stats [emoji] [timeframe]` - Show emoji usage statistics over a specific period.
+1896. `/sticker usage stats [sticker] [timeframe]` - Show sticker usage statistics over a specific period.
+1897. `/thread list inactive <days>` - List threads that have been inactive for a certain number of days.
+1898. `/forum activity heatmap [forum_channel] [timeframe]` - Show a heatmap of post/reply activity in a forum.
+1899. `/activity lottery` - Start a lottery activity where users can buy tickets.
+1900. `/tag search owner <user>` - Search for tags created by a specific user.
+1901. `/image deepdream [image]` - Apply a DeepDream effect to an image.
+1902. `/music volume default [set|view] <level>` - Set the default music volume for the server.
+1903. `/confession keywords filter [add|remove|list] <word>` - Filter confessions containing specific keywords before posting.
+1904. `/profile field custom list` - List all custom profile fields configured for the server.
+1905. `/pet leaderboard [skill|level]` - Show leaderboards for virtual pet skills or levels.
+1906. `/leaderboard most active day` - Show which day of the week is typically most active.
+1907. `/soundboard permissions [sound_name] [role|user]` - Set permissions for who can play a specific soundboard sound.
+1908. `/gpt generate code explanation <language> <code>` - Ask GPT to explain code in a specific language.
+1909. `/gpt analyze text complexity <text>` - Analyze the complexity (e.g., Flesch reading ease) of text.
+1910. `/system resource limits` - Show configured resource limits for the bot process (e.g., memory, CPU).
+1911. `/user avatar source <user>` - Get the source image file for a user's avatar.
+1912. `/guild integrations list [type]` - List server integrations filtered by type (webhook, bot, twitch).
+1913. `/webhook rate limit info [url]` - Check rate limit information specifically for a webhook URL.
+1914. `/message format list <items...>` - Format items into a Discord markdown list (bulleted or numbered).
+1915. `/role permissions check user [user] [role]` - Check if a user actually has a specific role.
+1916. `/api request history [limit]` - Show a history of recent API requests made by the bot.
+1917. `/color contrast ratio [color1] [color2]` - Calculate the WCAG contrast ratio between two colors.
+1918. `/unicode text direction <text>` - Check/force the text direction (LTR/RTL) using Unicode markers.
+1919. `/timezone difference <tz1> <tz2>` - Calculate the time difference between two timezones.
+1920. `/member list platform [desktop|mobile|web]` - List members currently using a specific platform.
+1921. `/member list activity type [playing|streaming|listening|watching]` - List members by their current activity type.
+1922. `/purge has embed [channel] [limit]` - Purge messages that contain any embed.
+1923. `/invite delete code <code>` - Delete a specific server invite by its code.
+1924. `/level role rewards stack [enable|disable]` - Configure if level role rewards stack or replace lower level roles.
+1925. `/level leaderboard change [timeframe]` - Show who gained the most levels/XP in a timeframe.
+1926. `/economy item create [name] [price] [description] [role_requirement]` - Create a shop item requiring a specific role to buy.
+1927. `/economy pay anonymous [user] <amount>` - Anonymously transfer currency to another user.
+1928. `/image generate segmentation [image]` - Perform image segmentation to identify different objects.
+1929. `/image search metadata <key:value> <query>` - Search images based on metadata tags (if available).
+1930. `/music queue mode [normal|dynamic]` - Set queue mode (normal=play added songs, dynamic=autoplay related songs).
+1931. `/music queue history` - Show the history of songs played in the current session.
+1932. `/server rules accept reset [user]` - Reset the rules acceptance status for a user.
+1933. `/auditlog retention policy [view|set] <days>` - Configure how long audit logs are kept by the bot (if stored locally).
+1934. `/dynamic vc bitrate default [set|view] <bitrate>` - Set the default bitrate for new dynamic VCs.
+1935. `/role permissions audit log [role]` - Show audit log entries related to changes in a role's permissions.
+1936. `/ticket user history [user]` - Show history of tickets created by or involving a user.
+1937. `/starboard threshold dynamic [enable|disable] [base_stars] [member_ratio]` - Dynamically adjust star threshold based on server size.
+1938. `/ai chatbot usage stats [user]` - Show AI chatbot usage statistics for a specific user.
+1939. `/ai image usage stats [user]` - Show AI image generation usage statistics for a user.
+1940. `/command disable reason [command] <reason>` - Provide a reason when disabling a command.
+1941. `/user profile comment [user] <comment>` - Leave a public comment on another user's profile (if enabled).
+1942. `/server boost leaderboard current` - Show leaderboard of current server boosters.
+1943. `/message reaction role list [message_id]` - List configured reaction roles on a message.
+1944. `/channel lock message [channel] <message>` - Set a custom message displayed when a channel is locked.
+1945. `/translate provider status` - Check the status of the underlying translation service API.
+1946. `/voice user stream check [user]` - Check if a user is currently streaming/screensharing in voice.
+1947. `/command permission list groups` - List all defined command permission groups.
+1948. `/error frequency graph [timeframe]` - Show a graph of error frequency over time.
+1949. `/suggestion status set <suggestion_id> <status_text>` - Set a custom status for a suggestion.
+1950. `/bugreport tag [bug_id] [add|remove] <tag>` - Add tags to categorize bug reports.
+1951. `/application status set <app_id> <status_text>` - Set a custom status for an application (e.g., 'Interviewing').
+1952. `/purge interactive` - Start an interactive purge wizard to select options.
+1953. `/prune exempt add [user|role]` - Add a user or role to the prune exemption list.
+1954. `/prune exempt remove [user|role]` - Remove a user or role from the prune exemption list.
+1955. `/channel permission list groups` - List channel permission templates/groups.
+1956. `/role check unused` - List roles that have no permissions and no members (potentially safe to delete).
+1957. `/emoji sync server [server_id]` - Attempt to sync emojis from another server the bot is in (admin, needs perms).
+1958. `/sticker sync server [server_id]` - Attempt to sync stickers from another server.
+1959. `/thread list active [min_participants]` - List active threads with a minimum number of participants.
+1960. `/forum prune posts <forum_channel> [inactive_days] [min_replies]` - Prune old or inactive forum posts.
+1961. `/activity create custom <name> <url>` - Add a custom link/URL as a voice channel activity.
+1962. `/tag execute context <name> [channel] [user]` - Execute a tag providing specific channel/user context.
+1963. `/image caption font [list|set] <font_name>` - Set the default font for image captions.
+1964. `/music lyrics save <song>` - Save the lyrics of the current or specified song locally.
+1965. `/confession block anonymous` - Block all anonymous confessions temporarily.
+1966. `/profile field custom delete <name>` - Delete a custom profile field (admin).
+1967. `/pet rename <old_name> <new_name>` - Rename your virtual pet.
+1968. `/leaderboard command errors` - Show users who encounter the most command errors.
+1969. `/soundboard play overlay [sound1] [sound2]` - Play two sounds simultaneously.
+1970. `/gpt brainstorm alternatives <idea>` - Ask GPT to brainstorm alternatives to a given idea.
+1971. `/gpt create poll <topic> [options_count]` - Ask GPT to generate poll questions and options.
+1972. `/system restart shard <shard_id>` - Restart a specific shard process (owner).
+1973. `/user avatar generate pattern [user]` - Generate a pattern image based on a user's avatar colors.
+1974. `/guild auditlog retention` - View Discord's default audit log retention period for the server.
+1975. `/webhook list permissions [url]` - List permissions required by a specific webhook URL.
+1976. `/message format header <level> <text>` - Format text as a Discord markdown header (using #).
+1977. `/role permissions granted by [permission]` - List roles that directly grant a specific permission.
+1978. `/api response inspector <request_id>` - Inspect the raw response body for a previous API request.
+1979. `/colorblind simulate text <color1> <color2> <text>` - Show how text looks with specific foreground/background colors under simulation.
+1980. `/unicode regional indicators <text>` - Convert text to regional indicator flag emojis (e.g., US -> 🇺🇸).
+1981. `/timezone location lookup <location_name>` - Find latitude/longitude for a location name.
+1982. `/member list moderator` - List all members identified as moderators (via role config).
+1983. `/member list admin` - List all members with Administrator permission.
+1984. `/purge reactions count <min_count> [channel] [limit]` - Purge messages with fewer than a minimum number of reactions.
+1985. `/invite revoke code <code>` - Revoke a specific invite code.
+1986. `/level role rewards temporary <level> <role> <duration>` - Grant a temporary role reward upon reaching a level.
+1987. `/level leaderboard server rank [user]` - Show a user's global rank across all servers (if supported).
+1988. `/economy item gift [user] <item_name>` - Gift an item from the shop to another user.
+1989. `/economy sell all [item_name]` - Sell all instances of a specific item from your inventory.
+1990. `/image generate prompt from image [image]` - Generate a text prompt describing an image using AI.
+1991. `/image search licensed [cc0|commercial] <query>` - Search for images with specific licenses.
+1992. `/music queue priority [add|view|clear] <query>` - Add songs to a priority queue that plays next.
+1993. `/music autoplay whitelist [add|remove|list] [artist|genre]` - Whitelist artists/genres for autoplay.
+1994. `/server rules timestamp` - Add timestamps to different sections of the server rules.
+1995. `/auditlog webhook status [url]` - Check the status and error rate of an audit log webhook.
+1996. `/dynamic vc user limit default [set|view] <limit>` - Set the default user limit for new dynamic VCs.
+1997. `/role permissions check redundant [role]` - Check for permissions that are implicitly granted by others (e.g., Admin implies all).
+1998. `/ticket custom fields [add|remove|list] <name> <type>` - Add custom fields to tickets (e.g., product area, urgency).
+1999. `/starboard channel topic [set|clear] <text>` - Set the topic for the starboard channel.
+2000. `/ai chatbot feedback <message_id> [good|bad] [comment]` - Provide feedback on a specific AI chatbot response.
