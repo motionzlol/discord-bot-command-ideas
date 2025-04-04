@@ -1,5 +1,19 @@
 #Bot Command Ideas
 
+## 
+
+
+Disclaimer;
+
+
+Some of these commands may have the potential to violate Discord Terms of Serivce, if you decide to use any of the commands from the list you're responsible
+for any punishments you may be given by Discord, it is at you're own responsibility to check if they violate ToS.
+
+
+
+
+
+
 Here is a list of potential command ideas for your Discord bot:
 
 ## Utility Commands
@@ -2115,3 +2129,403 @@ Here is a list of potential command ideas for your Discord bot:
 1998. `/ticket custom fields [add|remove|list] <name> <type>` - Add custom fields to tickets (e.g., product area, urgency).
 1999. `/starboard channel topic [set|clear] <text>` - Set the topic for the starboard channel.
 2000. `/ai chatbot feedback <message_id> [good|bad] [comment]` - Provide feedback on a specific AI chatbot response.
+2001. `/sticky role [channel] [role] <message>` - Show a sticky message only to users with a specific role.
+2002. `/message stats user [user] [timeframe]` - Show detailed message stats for a user (avg length, peak times).
+2003. `/message stats server [timeframe]` - Show server-wide message statistics (peak hours, active channels).
+2004. `/permission calculator reverse <integer>` - Show the permission names corresponding to a permission integer.
+2005. `/intent calculator reverse <integer>` - Show the intent names corresponding to an intent integer.
+2006. `/channel create voice temporary <name> [duration] [user_limit]` - Create a temporary voice channel that auto-deletes.
+2007. `/channel create text temporary <name> [duration] [topic]` - Create a temporary text channel.
+2008. `/channel create stage temporary <name> [duration] [topic]` - Create a temporary stage channel.
+2009. `/channel claim ownership [channel]` - Allow claiming ownership of ownerless temporary channels.
+2010. `/role mention off [role]` - Temporarily disable mentions for a role.
+2011. `/role mention on [role]` - Re-enable mentions for a role.
+2012. `/user nickname enforce pattern [role] <regex_pattern>` - Enforce nickname patterns for users with a specific role.
+2013. `/user nickname check length [min] [max]` - Find users with nicknames outside a specific length range.
+2014. `/server icon random` - Set a random icon from a predefined gallery (admin).
+2015. `/server banner random` - Set a random banner from a predefined gallery (admin).
+2016. `/server boost perks config [role_icon|sticker_slots|audio_quality]` - Configure specific boost perk settings.
+2017. `/server cleanup roles [min_members] [last_used_days]` - Find and suggest deleting inactive/unused roles.
+2018. `/server cleanup channels [min_activity_days]` - Find and suggest archiving/deleting inactive channels.
+2019. `/server cleanup emojis [min_usage_count]` - Find and suggest deleting unused emojis.
+2020. `/server cleanup stickers [min_usage_count]` - Find and suggest deleting unused stickers.
+2021. `/moderation dashboard` - Display a summary dashboard of recent moderation actions and server health.
+2022. `/moderation action reverse <case_id>` - Attempt to reverse a specific moderation action (e.g., unmute, unban). Requires careful implementation.
+2023. `/moderation note search <keyword>` - Search through all moderation notes for a keyword.
+2024. `/moderation user watchlist [add|remove|list] [user] [reason]` - Add users to a watchlist for closer monitoring.
+2025. `/moderation patrol` - Get a summary of recent activity in monitored channels or from watched users.
+2026. `/warn decay config [enable|disable] [duration]` - Configure automatic decay/expiration of warnings.
+2027. `/mute sync external [service]` - Sync mutes with external services like game servers (requires integration).
+2028. `/ban sync external [service]` - Sync bans with external services.
+2029. `/kick notify user [enable|disable]` - Optionally notify users via DM when they are kicked.
+2030. `/ban notify user [enable|disable]` - Optionally notify users via DM when they are banned (if possible).
+2031. `/info bot libraries` - List the main libraries and frameworks the bot is built with.
+2032. `/info bot host` - Show information about the bot's hosting environment (if allowed).
+2033. `/info api version` - Show the Discord API version the bot is targeting.
+2034. `/info database type` - Show the type of database the bot uses (if applicable).
+2035. `/info support channels` - List official support channels or methods for the bot.
+2036. `/github repo activity [owner/repo]` - Show recent activity (commits, issues, PRs) for a repo.
+2037. `/github issue track <issue_url> [channel]` - Track updates to a specific GitHub issue.
+2038. `/gitlab merge request track <mr_url> [channel]` - Track updates to a specific GitLab merge request.
+2039. `/steam workshop search <game_id> <query>` - Search the Steam Workshop for a specific game.
+2040. `/steam news <app_id>` - Get the latest news for a Steam game.
+2041. `/twitch clips top [streamer] [period]` - Show top clips for a streamer.
+2042. `/twitch vods [streamer]` - List recent VODs (past broadcasts) for a streamer.
+2043. `/youtube comments list <video_url>` - List recent comments on a YouTube video.
+2044. `/reddit user comments [username]` - Show recent comments made by a Reddit user.
+2045. `/reddit user posts [username]` - Show recent posts made by a Reddit user.
+2046. `/twitter user timeline [username]` - Show recent tweets from a Twitter user.
+2047. `/twitter search <query>` - Search Twitter for recent tweets matching a query.
+2048. `/image caption add progressbar [image] <percentage>` - Add a progress bar overlay to an image.
+2049. `/image caption add text curved [image] <text> [radius] [angle]` - Add text along a curve on an image.
+2050. `/image filter cartoonify [image]` - Apply a cartoon effect filter.
+2051. `/image filter sketch [image]` - Apply a sketch effect filter.
+2052. `/image overlay frame [image] <frame_style>` - Add a decorative frame around an image.
+2053. `/image overlay glitch static [image]` - Add a static glitch overlay.
+2054. `/image montage create [images...] [layout]` - Create a photo montage from multiple images.
+2055. `/image text bubble add [image] <text> [style]` - Add a text/speech bubble to an image.
+2056. `/image perspective warp [image] <coords_before> <coords_after>` - Apply perspective warp based on corner points.
+2057. `/image color splash [image] <color_to_keep>` - Convert image to greyscale except for one color.
+2058. `/config prefix list` - List allowed command prefixes (if multiple are supported).
+2059. `/config timezone server [set|view] <timezone>` - Set a default timezone for the server for bot messages.
+2060. `/config language server [set|view] <language_code>` - Set a default language for the server for bot messages.
+2061. `/config embed style [set|view] <minimal|compact|full>` - Set the default style/density for bot embeds.
+2062. `/config error message [set|view] <verbose|simple|code>` - Configure how command errors are displayed to users.
+2063. `/config confirmation messages [enable|disable]` - Toggle confirmation messages for successful actions.
+2064. `/config help style [paginated|menu|categories]` - Set the style for the main help command display.
+2065. `/config module settings <module_name>` - View current settings for a specific bot module (e.g., moderation, leveling).
+2066. `/config permissions reset [module|command]` - Reset permissions for a module or command to default.
+2067. `/config import server [file]` - Import bot settings for the server from a file (admin).
+2068. `/config export server [file]` - Export bot settings for the server to a file (admin).
+2069. `/giveaway template create <name> [duration] [winners] [prize]` - Create templates for giveaways.
+2070. `/giveaway template use <name>` - Start a giveaway using a predefined template.
+2071. `/giveaway template list` - List saved giveaway templates.
+2072. `/giveaway role requirement [message_id] [add|remove] [role]` - Add/remove role requirements for a giveaway.
+2073. `/giveaway level requirement [message_id] [set|clear] <level>` - Set a minimum level requirement for a giveaway.
+2074. `/giveaway join message [set|clear] <message>` - Set a custom message shown when users join a giveaway.
+2075. `/giveaway winner message [set|clear] <message>` - Set a custom message announcing giveaway winners.
+2076. `/giveaway duplicate entries [allow|block]` - Configure if users can have multiple entries (e.g., for boosting).
+2077. `/giveaway manual entry [add|remove] [user] [message_id]` - Manually add or remove a user's entry.
+2078. `/giveaway announce channel [set|clear] [channel]` - Announce giveaways starting/ending in a specific channel.
+2079. `/tag permissions [tag_name] [role|user] [allow|deny]` - Set permissions for who can use a specific tag.
+2080. `/tag category [tag_name] [set|clear] <category_name>` - Assign tags to categories for organization.
+2081. `/tag list category <category_name>` - List tags within a specific category.
+2082. `/tag counter [tag_name]` - Show how many times a tag has been used.
+2083. `/tag last used [tag_name]` - Show when a tag was last used and by whom.
+2084. `/tag find duplicate <content>` - Find tags with the same or very similar content.
+2085. `/tag template create <name> <content_with_placeholders>` - Create tag templates with placeholders.
+2086. `/tag template use <name> [placeholder_values...]` - Use a tag template, filling in values.
+2087. `/tag global create <name> <content>` - Create tags usable across servers (bot owner).
+2088. `/tag global list` - List available global tags.
+2089. `/leveling channel blacklist [add|remove|list] [channel]` - Prevent XP gain in specific channels.
+2090. `/leveling role blacklist [add|remove|list] [role]` - Prevent users with specific roles from gaining XP.
+2091. `/leveling voice xp rate [set|view] <rate>` - Configure the rate of XP gain while in voice channels.
+2092. `/leveling message xp rate [set|view] <rate>` - Configure the rate of XP gain per message.
+2093. `/leveling xp boost role [role] <multiplier> [duration]` - Give temporary XP boosts to users with a specific role.
+2094. `/leveling leaderboard reset warning [enable|disable]` - Warn users before a leaderboard reset.
+2095. `/leveling message length threshold [set|view] <length>` - Set a minimum message length to gain XP.
+2096. `/leveling cooldown message [set|view] <seconds>` - Set cooldown between messages granting XP.
+2097. `/leveling cooldown voice [set|view] <seconds>` - Set cooldown for gaining XP chunks in voice.
+2098. `/leveling import data [source] [file]` - Import leveling data from another bot or file (admin).
+2099. `/leveling export data [format]` - Export leveling data (admin).
+2100. `/economy job board [list|apply|quit]` - List available jobs, apply for one, or quit your current job.
+2101. `/economy work shift [start|end]` - Start/end a work shift for your job to earn money.
+2102. `/economy company create <name>` - Create a virtual company (requires complex system).
+2103. `/economy company manage [hire|fire|promote|salary]` - Manage employees in your company.
+2104. `/economy market trends` - Show current trends in the virtual stock/item market.
+2105. `/economy property list` - List available virtual properties for sale.
+2106. `/economy property buy <property_name>` - Buy virtual property.
+2107. `/economy property manage [rent|sell]` - Manage your owned properties.
+2108. `/economy craft recipe [list|view] <item_name>` - View crafting recipes.
+2109. `/economy craft item <item_name> [amount]` - Craft items using materials from inventory.
+2110. `/economy inventory value` - Show the estimated value of your entire inventory.
+2111. `/economy trade request [user] <offer_items> <request_items>` - Initiate a secure trade with another user.
+2112. `/economy trade accept <user>` - Accept a pending trade request.
+2113. `/economy trade decline <user>` - Decline a pending trade request.
+2114. `/music lyrics wordcloud [song]` - Generate a word cloud from song lyrics.
+2115. `/music artist info <artist_name>` - Get information about a music artist (bio, top tracks).
+2116. `/music album info <album_name> [artist]` - Get information about a music album (tracklist, release date).
+2117. `/music genre stations [genre_name]` - List radio stations related to a specific genre.
+2118. `/music history export [format]` - Export your listening history.
+2119. `/music queue shuffle weighted` - Shuffle the queue, prioritizing certain genres/artists based on history.
+2120. `/music effect custom <equalizer_bands>` - Apply custom equalizer settings.
+2121. `/music recommend based on queue` - Get recommendations based on the current music queue.
+2122. `/music session stats` - Show statistics for the current music playback session (uptime, songs played).
+2123. `/music skip percentage` - Show the current percentage of votes needed to skip.
+2124. `/music announcement toggle [join|leave|play|skip]` - Toggle specific music announcements.
+2125. `/poll duration set <message_id> <duration>` - Set or change the duration for an active poll.
+2126. `/poll winner announce <message_id>` - Announce the winning option(s) of a poll.
+2127. `/poll clear votes <message_id>` - Clear all votes on an active poll (admin).
+2128. `/poll multiple choice [enable|disable] <message_id>` - Allow users to vote for multiple options.
+2129. `/poll hide results [enable|disable] <message_id>` - Hide poll results until it ends.
+2130. `/poll participation list <message_id>` - List users who have voted on a poll (if not anonymous).
+2131. `/poll require role <message_id> [role]` - Require a specific role to vote on a poll.
+2132. `/poll theme set <message_id> <color|image>` - Set a visual theme for the poll embed.
+2133. `/poll export results <message_id> [format]` - Export poll results to a file.
+2134. `/poll reminder set <message_id> <time_before_end>` - Set a reminder shortly before a poll ends.
+2135. `/reactionrole unique group <message_id> <group_name>` - Create a reaction role group where users can only pick one role from the group.
+2136. `/reactionrole message edit <message_id> <new_text>` - Edit the message associated with reaction roles.
+2137. `/reactionrole list detailed <message_id>` - Show detailed configuration for reaction roles on a message.
+2138. `/reactionrole sync users <message_id>` - Force sync roles for all users based on current reactions.
+2139. `/reactionrole add description <message_id> <emoji> <description>` - Add descriptions shown when hovering over reaction roles.
+2140. `/reactionrole remove emoji <message_id> <emoji>` - Remove a specific reaction role configuration.
+2141. `/reactionrole temporary <message_id> <emoji> <role> <duration>` - Assign a role via reaction for a limited duration.
+2142. `/reactionrole log channel [set|clear] [channel]` - Log when users add/remove reaction roles.
+2143. `/reactionrole copy setup <source_message_id> <target_message_id>` - Copy reaction role setup from one message to another.
+2144. `/reactionrole view users <message_id> <emoji>` - View users who have reacted with a specific emoji for a role.
+2145. `/buttonrole create message <text> [buttons...]` - Create a new message specifically for button roles. Use `/buttonrole add` after.
+2146. `/buttonrole add <message_id> <label> <role> [style] [emoji]` - Add a button configuration to a message.
+2147. `/buttonrole remove <message_id> <label_or_role>` - Remove a button configuration.
+2148. `/buttonrole list <message_id>` - List configured button roles on a message.
+2149. `/buttonrole unique group <message_id> <group_name>` - Like reaction roles, allow only one role from a button group.
+2150. `/buttonrole temporary <message_id> <label> <role> <duration>` - Assign temporary roles via buttons.
+2151. `/ticket panel create <channel> <title> <description> [button_label]` - Create a panel message to open tickets.
+2152. `/ticket panel edit <message_id> <title|description|label>` - Edit an existing ticket panel.
+2153. `/ticket category set <category_id>` - Set the category where new ticket channels are created.
+2154. `/ticket support role [add|remove|list] [role]` - Configure roles that can manage tickets.
+2155. `/ticket transcript upload service [pastebin|gist|local]` - Configure where transcripts are uploaded.
+2156. `/ticket reopen <ticket_id> [reason]` - Reopen a previously closed ticket.
+2157. `/ticket move category <ticket_id> <category_id>` - Move an active ticket channel to a different category.
+2158. `/ticket user block [user]` - Prevent a user from opening new tickets.
+2159. `/ticket user unblock [user]` - Allow a blocked user to open tickets again.
+2160. `/ticket message template [type] [set|view] <message>` - Configure templates for ticket open/close messages.
+2161. `/starboard channel check [channel]` - Check if a channel is ignored or blacklisted by starboard.
+2162. `/starboard user check [user]` - Check if a user is blacklisted from starboard.
+2163. `/starboard message requeue <message_id>` - Force re-checking a message against starboard criteria.
+2164. `/starboard webhook config [url] [username] [avatar]` - Configure starboard messages to post via webhook.
+2165. `/starboard leaderboard clear` - Clear the starboard leaderboard stats.
+2166. `/starboard jump link [enable|disable]` - Include a "Jump to Message" link in starboard entries.
+2167. `/starboard star emoji custom [emoji]` - Use a custom emoji for starring messages.
+2168. `/starboard self star [allow|deny]` - Allow or deny users from starring their own messages.
+2169. `/starboard lock older than [days]` - Prevent starring messages older than a certain number of days.
+2170. `/starboard edit behavior [ignore|update|new_entry]` - Configure how edits to starred messages are handled.
+2171. `/fun truth list [category]` - List available truth question categories.
+2172. `/fun dare list [category]` - List available dare categories.
+2173. `/fun wyr list [category]` - List available Would You Rather categories.
+2174. `/fun topic list [category]` - List available conversation topic categories.
+2175. `/fun quote add <quote_text> [author]` - Add a new quote to the bot's database.
+2176. `/fun fact add <fact_text> [category]` - Add a new fact to the bot's database.
+2177. `/fun meme add template <name> <image_url> [text_boxes]` - Add a new meme template.
+2178. `/fun meme list templates` - List available meme templates for `/meme template`.
+2179. `/fun ship history [user]` - Show a user's relationship history (marriages, divorces).
+2180. `/fun hug leaderboard` - Show who gives/receives the most hugs.
+2181. `/fun pat leaderboard` - Show who gives/receives the most pats.
+2182. `/fun insult [user]` - Generate a playful insult towards a user (use with caution, needs config).
+2183. `/fun compliment [user]` - Generate a compliment for a user.
+2184. `/fun pickup line [user]` - Generate a cheesy pickup line.
+2185. `/fun username generator [style]` - Generate a random username.
+2186. `/fun story generator [prompt]` - Generate a random short story paragraph.
+2187. `/fun ascii art list` - List available preset ASCII art images.
+2188. `/fun sound effect play <effect_name>` - Play a built-in sound effect (like applause, drumroll).
+2189. `/fun sound effect list` - List available built-in sound effects.
+2190. `/fun user avatar collage [users...]` - Create a collage from multiple users' avatars.
+2191. `/minigame tictactoe leaderboard` - Show the Tic-Tac-Toe leaderboard.
+2192. `/minigame connect4 leaderboard` - Show the Connect Four leaderboard.
+2193. `/minigame hangman start custom <word> [category]` - Start hangman with a custom word and category hint.
+2194. `/minigame hangman leaderboard` - Show the Hangman leaderboard.
+2195. `/minigame trivia start custom [questions_file]` - Start trivia using custom questions from a file.
+2196. `/minigame trivia settings [difficulty|timeout|points]` - Configure trivia game settings.
+2197. `/minigame wordle challenge [user]` - Challenge another user to a Wordle game.
+2198. `/minigame scramble leaderboard` - Show the word scramble leaderboard.
+2199. `/minigame fasttype custom <text>` - Start a typing test with custom text.
+2200. `/minigame fasttype leaderboard` - Show the typing test leaderboard.
+2201. `/minigame rps tournament [start|join|results]` - Run a Rock Paper Scissors tournament.
+2202. `/minigame numberguess config [range|attempts]` - Configure the number guessing game.
+2203. `/minigame memorygame difficulty [easy|medium|hard]` - Set the difficulty for the memory game.
+2204. `/minigame minesweeper reveal <x> <y>` - Reveal a square in Minesweeper.
+2205. `/minigame minesweeper flag <x> <y>` - Flag a square in Minesweeper.
+2206. `/profile cover photo [set|clear] <image_url>` - Set a larger cover photo for your profile.
+2207. `/profile links add <platform> <url>` - Add social/external links to your profile.
+2208. `/profile links remove <platform>` - Remove a linked platform.
+2209. `/profile links view [user]` - View a user's linked platforms.
+2210. `/profile status message [set|clear] <message>` - Set a custom status message on your profile.
+2211. `/profile timezone display [enable|disable]` - Choose whether to display your timezone on your profile.
+2212. `/profile pronouns set <pronouns>` - Set your preferred pronouns on your profile.
+2213. `/profile pronouns view [user]` - View a user's set pronouns.
+2214. `/profile badge showcase [set|clear] [badges...]` - Choose specific badges to showcase prominently.
+2215. `/profile rep cooldown` - Show when you can give another reputation point.
+2216. `/profile rep leaderboard weekly` - Show the reputation leaderboard for the week.
+2217. `/marry gift partner <item_name>` - Gift an economy item to your married partner.
+2218. `/marry shared bank [deposit|withdraw|balance]` - Interact with a shared bank account with your partner.
+2219. `/marry anniversary` - Show your marriage anniversary date.
+2220. `/adopt list family` - Show who adopted you and whom you have adopted.
+2221. `/interactions kiss count [user]` - Show how many times a user has been kissed.
+2222. `/interactions slap count [user]` - Show how many times a user has been slapped.
+2223. `/interactions cuddle count [user]` - Show how many times a user has been cuddled.
+2224. `/interactions poke count [user]` - Show how many times a user has been poked.
+2225. `/interactions hug stats` - Show server-wide stats for hugs given/received.
+2226. `/logging configure [module] [level] [channel]` - Configure logging levels and output channels for different modules.
+2227. `/logging view recent [level] [count]` - View recent log entries directly in Discord.
+2228. `/logging search <query> [level]` - Search through stored logs.
+2229. `/logging clear [module]` - Clear logs for a specific module or all logs.
+2230. `/logging export [module] [format]` - Export logs to a file.
+2231. `/automod whitelist bypass automod [user|role]` - Allow certain users/roles to bypass all automod filters.
+2232. `/automod regex filter [add|remove|list] <name> <regex_pattern> [action] [channel]` - Create custom regex-based automod filters.
+2333. `/automod caps filter config [threshold_percentage] [min_length] [action]` - Configure the excessive caps filter.
+2334. `/automod mention spam config [threshold_count] [interval] [action]` - Configure the mention spam filter.
+2335. `/automod new account age gate [set|view] <days> [action]` - Take action on accounts newer than a specified age.
+2336. `/automodraid detection sensitivity [low|medium|high]` - Set the sensitivity for raid detection algorithms.
+2337. `/automod quarantine user [user] <duration> [reason]` - Place a user in a quarantined role with limited permissions.
+2338. `/automod log view [filter_type] [limit]` - View logs specifically from automod actions.
+2339. `/automod stats view [filter_type]` - Show statistics on how often each automod filter is triggered.
+2340. `/automod test pattern <pattern_type> <text>` - Test a string against a specific automod pattern (e.g., invite link).
+2341. `/customcommand create interactive` - Start an interactive wizard to create a custom command.
+2342. `/customcommand variables list` - List available variables usable within custom command actions.
+2343. `/customcommand trigger [set|view] <name> <regex_or_prefix>` - Set a custom trigger (regex or prefix) for a custom command.
+2344. `/customcommand cooldown set <name> <seconds>` - Set a cooldown for a custom command.
+2345. `/customcommand usage count <name>` - Show how many times a custom command has been used.
+2346. `/customcommand enable <name>` - Enable a disabled custom command.
+2347. `/customcommand disable <name>` - Disable a custom command without deleting it.
+2348. `/customcommand share <name>` - Generate a shareable definition/code for a custom command.
+2349. `/customcommand import <definition_code>` - Import a custom command from a shared definition.
+2350. `/customcommand owner <name>` - Show who created a custom command.
+2351. `/schedule list user [user]` - List scheduled tasks created by a specific user.
+2352. `/schedule run now [task_id]` - Force a scheduled task to run immediately.
+2353. `/schedule edit [task_id] <new_time|new_action>` - Edit the time or action of a scheduled task.
+2354. `/schedule pause [task_id]` - Temporarily pause a recurring scheduled task.
+2355. `/schedule resume [task_id]` - Resume a paused scheduled task.
+2356. `/schedule log view [task_id]` - View the execution history/log for a scheduled task.
+2357. `/schedule timezone set <timezone>` - Set the timezone used for scheduling tasks (cron).
+2358. `/schedule command <cron_or_time> <command_string>` - Schedule a bot command to run at a specific time.
+2359. `/schedule webhook send <cron_or_time> <url> <message>` - Schedule a webhook message.
+2360. `/schedule cleanup old [days]` - Automatically delete completed or old scheduled tasks.
+2361. `/feed status <url>` - Check the status and last update time for a specific feed (RSS, Twitter, etc.).
+2362. `/feed fetch now <url>` - Force fetching updates from a feed immediately.
+2363. `/feed pause <url>` - Temporarily pause updates from a specific feed.
+2364. `/feed resume <url>` - Resume updates from a paused feed.
+2365. `/feed format message <url> <template>` - Customize the message format for feed updates using placeholders.
+2366. `/feed filter keyword <url> [include|exclude] <keyword>` - Add keyword filters to feed entries.
+2367. `/feed mention role <url> [role]` - Mention a specific role when posting feed updates.
+2368. `/feed list channel [channel]` - List all feeds configured to post in a specific channel.
+2369. `/feed error log <url>` - View error logs related to fetching a specific feed.
+2370. `/feed manage interactive` - Start an interactive feed management session.
+2371. `/role icon random [role]` - Set a random icon for a role from a gallery (boosted).
+2372. `/role permissions list missing [role] [permission_preset]` - List permissions missing from a role based on a preset (e.g., 'moderator').
+2373. `/role assign interactive` - Start interactive mode to assign roles to users.
+2374. `/role remove interactive` - Start interactive mode to remove roles from users.
+2375. `/role clone permissions only [source_role] [target_role]` - Clone only permissions, not other settings like color/hoist.
+2376. `/role position set [role] <position>` - Set the exact position of a role in the hierarchy.
+2377. `/role visibility check [role]` - Check which members can see/mention this role.
+2378. `/role attribute mass set [roles...] <hoist|mentionable> [true|false]` - Mass set hoist/mentionable status.
+2379. `/role attribute mass color [roles...] <color>` - Mass set the color for multiple roles.
+2380. `/role prune members no activity [role] [days]` - Remove role from members inactive for X days.
+2381. `/channel position relative [channel] [above|below] [reference_channel]` - Move channel relative to another.
+2382. `/channel clone advanced [channel] [options: name, topic, perms, webhooks]` - Clone channel with specific options.
+2383. `/channel permissions copy category [source_category] [target_category]` - Copy permissions from one category to another.
+2384. `/channel permissions audit [channel]` - Audit permission overwrites for potential issues (e.g., @everyone mentions).
+2385. `/channel archive settings [channel] [duration] [lock]` - Configure auto-archiving settings for threads in the channel.
+2386. `/channel default name format [category] <format>` - Set a default naming format for new channels in a category.
+2387. `/channel lock role exempt [channel] [role]` - Exempt a role from channel locks.
+2388. `/channel type convert [channel] [text|announcement]` - Convert channel type (if possible).
+2389. `/channel message ttl set [channel] <duration>` - Automatically delete messages older than a duration (risky).
+2390. `/channel message rate limit [channel] <count> <interval> [action]` - Limit message rate per user.
+2391. `/emoji usage report [timeframe]` - Generate a report on emoji usage across the server.
+2392. `/emoji pack create from server <name>` - Create an emoji pack containing all current server emojis.
+2393. `/emoji vote add <image_url> [name]` - Start a vote to add a new emoji.
+2394. `/emoji replace <old_emoji> <new_image_url>` - Replace an existing emoji's image.
+2395. `/emoji optimize [emoji]` - Attempt to optimize emoji file size.
+2396. `/sticker usage report [timeframe]` - Generate a report on sticker usage.
+2397. `/sticker pack organize <pack_name> [stickers...]` - Organize stickers within a pack.
+2398. `/sticker vote add <image_file> <name> [emoji]` - Start a vote to add a new sticker.
+2399. `/sticker optimize [sticker]` - Attempt to optimize sticker file size.
+2400. `/sticker keywords add [sticker] <keywords...>` - Add search keywords to a sticker.
+2401. `/thread list category [category]` - List all threads originating from channels within a category.
+2402. `/thread find post <message_id>` - Find which thread a specific message belongs to.
+2403. `/thread auto message [thread] <message>` - Send an automatic message when users join a thread.
+2404. `/thread export <thread> [format]` - Export the content of a thread to a file.
+2405. `/thread lock older than [thread] [days]` - Automatically lock threads inactive for X days.
+2406. `/forum create from template <template_name> <channel_name>` - Create a forum channel using a template.
+2407. `/forum post reminder <post_id> <duration>` - Set a reminder to follow up on a forum post.
+2408. `/forum post merge <post_id_1> <post_id_2>` - Merge two similar forum posts together.
+2409. `/forum export channel <forum_channel> [format]` - Export all posts and replies from a forum channel.
+2410. `/forum activity subscription [forum_channel] [keywords]` - Get notified about new posts containing keywords.
+2411. `/event create recurring <name> <description> <channel> <cron_time> [duration]` - Create recurring scheduled events.
+2412. `/event copy <event_id>` - Create a new event by copying an existing one.
+2413. `/event speakers manage <event_id> [add|remove|list] [user]` - Manage speakers for a scheduled event.
+2414. `/event visibility set <event_id> [public|role_restricted]` - Set visibility for an event.
+2415. `/event announce <event_id> [message]` - Manually send an announcement for an event.
+2416. `/event location set <event_id> <location_text>` - Set a physical or virtual location for an event.
+2417. `/event cohost add <event_id> [user]` - Add co-hosts who can manage the event.
+2418. `/event export attendees <event_id> [format]` - Export the list of users interested in an event.
+2419. `/event link calendar <event_id> [google|outlook|ical]` - Provide links to add the event to calendars.
+2420. `/event stats <event_id>` - Show statistics like RSVP count, attendance (if tracked).
+2421. `/server settings diff [compare_with_backup|compare_with_date]` - Show changes in server settings over time.
+2422. `/server status page link [set|view] <url>` - Link to an external server status page.
+2423. `/server documentation link [set|view] <url>` - Link to server documentation or wiki.
+2424. `/server suggestion board link [set|view] <url>` - Link to an external suggestion board.
+2425. `/server bug tracker link [set|view] <url>` - Link to an external bug tracker.
+2426. `/server language add <language_code> [channel_for_role]` - Add support for another language community within the server.
+2427. `/server partner program apply` - Start the process to apply for Discord partnership (if eligible).
+2428. `/server partner program status` - Check the server's partnership status.
+2429. `/server vanity url simulate <text>` - Check if a potential vanity URL is likely available.
+2430. `/server member cap view` - View the current server member cap.
+2431. `/user note tag [note_id] [add|remove] <tag>` - Add tags to moderation notes for organization.
+2432. `/user activity heatmap [user] [timeframe]` - Show a heatmap of a user's message activity times.
+2433. `/user role check common [users...]` - Find roles that multiple users have in common.
+2434. `/user permission check channel [user] [channel] [permission]` - Check if a user has a specific permission overwrite in a channel.
+2435. `/user referral code generate` - Generate a personal referral code for inviting users (if tracking system exists).
+2436. `/user referral code view` - View your referral code and stats.
+2437. `/user timezone set interactive` - Start an interactive session to set your timezone.
+2438. `/user language set interactive` - Start an interactive session to set your preferred language.
+2439. `/user data export format [json|csv]` - Choose the format for your personal data export.
+2440. `/user block command [command]` - Prevent a specific command from being used on you (e.g., `/slap`).
+2441. `/purge attachments large <size_mb> [channel] [limit]` - Purge messages with attachments larger than a certain size.
+2442. `/purge url shorteners [channel] [limit]` - Purge messages containing common URL shortener links.
+2443. `/purge filter script [script]` - Purge messages based on a custom filter script (advanced, risky).
+2444. `/purge simulate count [options...]` - Only count how many messages *would* be purged.
+2445. `/purge cancel` - Cancel an ongoing purge operation (if possible).
+2446. `/security check webhooks` - Audit webhooks for insecure permissions or unknown origins.
+2447. `/security check integrations` - Audit bot/app integrations for excessive permissions.
+2448. `/security check public channels` - Audit permissions on channels accessible to @everyone.
+2449. `/security check moderator roles` - Audit permissions granted to moderator roles.
+2450. `/security check admin roles` - Audit permissions granted to administrator roles.
+2451. `/backup schedule list` - List scheduled server backups.
+2452. `/backup download latest` - Download the most recent server backup.
+2453. `/backup rotate settings [keep_count] [min_interval]` - Configure automatic rotation/deletion of old backups.
+2454. `/backup storage location [view|set] <path_or_service>` - Configure where backups are stored.
+2455. `/backup integrity check [backup_id]` - Verify the integrity of a backup file.
+2456. `/restore simulate [backup_id]` - Simulate restoring a backup to see potential changes/conflicts.
+2457. `/restore partial [backup_id] [roles|channels|settings]` - Restore only specific parts of a backup (very risky).
+2458. `/restore user roles [backup_id] [user]` - Restore roles for a specific user from a backup.
+2459. `/restore compare server [backup_id]` - Show differences between a backup and the current server state.
+2460. `/restore log view` - View logs of past restore operations.
+2461. `/webhook message edit <url> <message_id> <new_content>` - Edit a message sent by a specific webhook.
+2462. `/webhook message delete <url> <message_id>` - Delete a message sent by a specific webhook.
+2463. `/webhook forwarder create <source_channel> <target_webhook_url>` - Forward messages from a channel to a webhook.
+2464. `/webhook forwarder stop <source_channel> <target_webhook_url>` - Stop forwarding messages.
+2465. `/webhook security audit [url]` - Audit a webhook for potential security issues (e.g., exposed URL).
+2466. `/interaction modal create <title> [custom_id] [components...]` - Create and send a message containing a button that opens a modal.
+2467. `/interaction modal template save <name> [components...]` - Save a modal structure as a template.
+2468. `/interaction modal template use <name> [interaction_id]` - Respond to an interaction using a modal template.
+2469. `/interaction component state view <message_id>` - View the current state/values of interactive components (e.g., select menu choice).
+2470. `/interaction listener list` - List active component interaction listeners set up by the bot.
+2471. `/chess puzzle daily` - Get the daily chess puzzle from Lichess/Chess.com.
+2472. `/chess opening explorer <moves>` - Explore common chess openings based on moves (e.g., e4 c5).
+2473. `/sudoku solver [board_state]` - Solve a Sudoku puzzle.
+2474. `/crossword clue helper <pattern> [length]` - Get potential answers for a crossword clue pattern.
+2475. `/word search game [create|join] [size] [wordlist]` - Create or join a word search game.
+2476. `/battleship game [start|attack|view]` - Play Battleship against the bot or another user.
+2477. `/mafia game [start|join|vote|accuse]` - Start or participate in a game of Mafia/Werewolf (requires complex state management).
+2478. `/uno game [start|play|draw|callout]` - Play Uno against the bot or other users.
+2479. `/poker game [start|bet|check|fold|call]` - Play Texas Hold'em poker.
+2480. `/blackjack hit` - Take another card in Blackjack.
+2481. `/blackjack stand` - Stand in Blackjack.
+2482. `/blackjack double down` - Double down in Blackjack.
+2483. `/blackjack split` - Split pairs in Blackjack (if applicable).
+2484. `/slots stats` - Show your personal slot machine statistics (spins, wins, losses).
+2485. `/roulette history` - Show the history of recent roulette spins.
+2486. `/weather radar [location]` - Show the weather radar map for a location.
+2487. `/weather map [location] [layer: temp|precip|wind]` - Show weather maps with different layers.
+2488. `/earthquake feed [magnitude] [location]` - Show recent earthquakes.
+2489. `/space launch details <launch_id>` - Get detailed information about a specific space launch.
+2490. `/space station tracker` - Show a live map tracker for the ISS.
+2491. `/astronomy events upcoming` - List upcoming astronomical events (meteor showers, eclipses).
+2492. `/photo contest submit <image_url> [theme]` - Submit an image to a server photo contest.
+2493. `/photo contest vote <submission_id>` - Vote on photo contest submissions.
+2494. `/photo contest results [theme]` - Show the results of a photo contest.
+2495. `/writing prompt [genre]` - Get a random writing prompt.
+2496. `/drawing prompt` - Get a random drawing prompt/idea.
+2497. `/server poll create <question> | <options...>` - Create a server-wide poll announcement.
+2498. `/qna session schedule <topic> <time> [host]` - Schedule a Q&A session for later.
+2499. `/qna session history [topic]` - View the history/transcript of a past Q&A session.
+2500. `/secret santa [start|join|draw]` - Organize a Secret Santa event.
