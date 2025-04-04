@@ -1,6 +1,6 @@
-# Haven Bot Command Ideas
+# Bot Command Ideas
 
-Here is a list of potential command ideas for the Haven Discord bot:
+Here is a list of potential command ideas for the Discord bots.
 
 ## Utility Commands
 1.  `/ping` - Check bot latency and status.
